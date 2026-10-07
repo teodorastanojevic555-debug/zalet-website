@@ -15,3 +15,6 @@ desktop.ini
 # Windows Junction
 assets/image
 assets/image/
+
+# Helper script
+push_to_github.bat
