@@ -524,6 +524,7 @@
     checkoutErrorBox: document.getElementById('checkoutErrorBox'),
     checkoutErrorMessage: document.getElementById('checkoutErrorMessage'),
     checkoutRetryBtn: document.getElementById('checkoutRetryBtn'),
+    checkoutCopyErrorOrderBtn: document.getElementById('checkoutCopyErrorOrderBtn'),
     checkoutInstagramFallbackBtn: document.getElementById('checkoutInstagramFallbackBtn'),
     checkoutSubtotal: document.getElementById('checkoutSubtotal'),
     checkoutShipping: document.getElementById('checkoutShipping'),
@@ -1093,7 +1094,7 @@ Plaćanje: Pouzećem`;
     DOM.checkoutForm.style.display = 'flex';
     if (DOM.checkoutSubmitBtn) {
       DOM.checkoutSubmitBtn.disabled = false;
-      DOM.checkoutSubmitBtn.innerHTML = 'POTVRDI I POŠALJI PORUDŽBINU // CONFIRM DISPATCH';
+      DOM.checkoutSubmitBtn.innerHTML = 'POTVRDI PORUDŽBINU // CONFIRM ORDER';
     }
     if (DOM.checkoutErrorBox) {
       DOM.checkoutErrorBox.style.display = 'none';
@@ -1464,14 +1465,18 @@ Plaćanje: Pouzećem`;
 
         const cartSnapshot = JSON.parse(JSON.stringify(state.cart));
 
-        // Format ordered items for email notification table
+        // Format ordered items with explicit RSD and EUR prices for domestic courier and international clarity
         const itemsFormattedList = cartSnapshot.map((item, idx) => {
-          return `${idx + 1}. ${item.title} | Vel: ${item.size} | Kol: ${item.quantity} | Cena: ${formatPrice(item.priceRSD * item.quantity, item.priceEUR * item.quantity)} [SKU: ${item.sku}]`;
+          const itemTotalRSD = (item.priceRSD * item.quantity).toLocaleString('sr-RS');
+          const itemTotalEUR = (item.priceEUR * item.quantity).toFixed(2);
+          const itemUnitRSD = item.priceRSD.toLocaleString('sr-RS');
+          const itemUnitEUR = item.priceEUR.toFixed(2);
+          return `${idx + 1}. ${item.title} | Vel: ${item.size} | Kol: ${item.quantity} | Cena: ${itemTotalRSD} RSD (€${itemTotalEUR}) [Jedinična: ${itemUnitRSD} RSD / €${itemUnitEUR}] [SKU: ${item.sku}]`;
         }).join('\n');
 
-        const shippingFeeText = isFree ? 'BESPLATNO (0 RSD)' : (state.currency === 'EUR' ? '€3.50' : '350 RSD');
-        const grandTotalText = `${formatPrice(grandTotalRSD, grandTotalEUR)} (RSD: ${grandTotalRSD.toLocaleString('sr-RS')} RSD / EUR: €${grandTotalEUR.toFixed(2)})`;
-        const subtotalText = `${formatPrice(totalRSD, totalEUR)} (RSD: ${totalRSD.toLocaleString('sr-RS')} RSD / EUR: €${totalEUR.toFixed(2)})`;
+        const shippingFeeText = isFree ? 'BESPLATNO (0 RSD / €0.00)' : '350 RSD (€3.50)';
+        const grandTotalText = `${grandTotalRSD.toLocaleString('sr-RS')} RSD (€${grandTotalEUR.toFixed(2)})`;
+        const subtotalText = `${totalRSD.toLocaleString('sr-RS')} RSD (€${totalEUR.toFixed(2)})`;
 
         // Payload for FormSubmit to deliver order to owner email
         const orderPayload = {
@@ -1496,7 +1501,7 @@ Plaćanje: Pouzećem`;
 
         // Loading state on submit button
         const submitBtn = DOM.checkoutSubmitBtn || DOM.checkoutForm.querySelector('button[type="submit"]');
-        const defaultBtnHtml = 'POTVRDI I POŠALJI PORUDŽBINU // CONFIRM DISPATCH';
+        const defaultBtnHtml = submitBtn ? submitBtn.innerHTML : 'POTVRDI PORUDŽBINU // CONFIRM ORDER';
         if (submitBtn) {
           submitBtn.disabled = true;
           submitBtn.innerHTML = 'OBRADA PORUDŽBINE...';
@@ -1506,22 +1511,39 @@ Plaćanje: Pouzećem`;
         }
 
         try {
+          // Timeout after 15 seconds to prevent hanging button state if network stalls
+          const abortController = new AbortController();
+          const timeoutId = setTimeout(() => abortController.abort(), 15000);
+
           const response = await fetch('https://formsubmit.co/ajax/teodorastanojevic555@gmail.com', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json'
             },
-            body: JSON.stringify(orderPayload)
+            body: JSON.stringify(orderPayload),
+            signal: abortController.signal
           });
+
+          clearTimeout(timeoutId);
 
           if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
           }
 
           const responseData = await response.json();
-          if (responseData && (responseData.success === false || responseData.success === 'false')) {
-            throw new Error(responseData.message || 'Server je odbio porudžbinu.');
+
+          // FormSubmit responds with success: "true"/true on active forms,
+          // or a message stating "This form needs Activation..." on the first unverified submission.
+          // In both cases the submission has been accepted into FormSubmit's system.
+          const isSuccessfulDispatch = responseData && (
+            responseData.success === true ||
+            responseData.success === 'true' ||
+            (typeof responseData.message === 'string' && /activat/i.test(responseData.message))
+          );
+
+          if (!isSuccessfulDispatch) {
+            throw new Error(responseData?.message || 'Server je odbio porudžbinu.');
           }
 
           // --- SUCCESS ---
@@ -1598,6 +1620,9 @@ Plaćanje: Pouzećem`;
           DOM.checkoutForm.style.display = 'none';
           DOM.orderSuccessBox.classList.add('show');
 
+          // Reset checkout form fields
+          DOM.checkoutForm.reset();
+
           // Clear cart
           state.cart = [];
           saveCart();
@@ -1625,21 +1650,21 @@ Plaćanje: Pouzećem`;
           if (DOM.checkoutErrorBox) {
             DOM.checkoutErrorBox.style.display = 'block';
             if (DOM.checkoutErrorMessage) {
-              DOM.checkoutErrorMessage.textContent = 'Došlo je do greške u povezivanju sa serverom. Vaši podaci i artikli u korpi su sačuvani! Možete pokušati ponovo ili poslati porudžbinu preko Instagram DM-a.';
+              DOM.checkoutErrorMessage.textContent = 'Došlo je do greške u povezivanju sa serverom. Vaši podaci i artikli u korpi su sačuvani! Možete pokušati ponovo, kopirati podatke ili poručiti preko Instagram DM-a.';
             }
           }
 
           // Prepare Instagram DM fallback text with entered details
           const fallbackDmText =
-`Pozdrav @zaletclub! Došlo je do greške pri slanju preko sajta, šaljem porudžbinu direktno:
+`Pozdrav @zaletclub! Želim da poručim komade direktno:
 ------------------------------------------
 BROJ PORUDŽBINE: #${orderNumber}
 ------------------------------------------
 ARTIKLI:
 ${itemsFormattedList}
 ------------------------------------------
-UKUPNO: ${formatPrice(grandTotalRSD, grandTotalEUR)}
-DOSTAVA: ${shippingMethod}
+UKUPNO ZA UPLATU: ${grandTotalText}
+DOSTAVA: ${shippingMethod} (${shippingFeeText})
 PLAĆANJE: ${paymentMethod}
 ------------------------------------------
 PODACI ZA ISPORUKU:
@@ -1670,6 +1695,26 @@ ${note ? `Napomena: ${note}\n` : ''}`;
           } else {
             DOM.checkoutForm.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
           }
+        }
+      });
+    }
+
+    // Checkout Error Quick Copy Order Button
+    if (DOM.checkoutCopyErrorOrderBtn) {
+      DOM.checkoutCopyErrorOrderBtn.addEventListener('click', () => {
+        const textToCopy = (DOM.dmTemplateBox && DOM.dmTemplateBox.textContent) ? DOM.dmTemplateBox.textContent : '';
+        if (textToCopy && navigator.clipboard) {
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            DOM.checkoutCopyErrorOrderBtn.textContent = 'KOPIRANO U KLIPBORD ✓';
+            DOM.checkoutCopyErrorOrderBtn.classList.add('copy-btn-success');
+            playSound('telemetry');
+            setTimeout(() => {
+              DOM.checkoutCopyErrorOrderBtn.textContent = 'KOPIRAJ PORUDŽBINU';
+              DOM.checkoutCopyErrorOrderBtn.classList.remove('copy-btn-success');
+            }, 2400);
+          }).catch(() => {
+            showToast('Nije moguće pristupiti klipbordu');
+          });
         }
       });
     }
