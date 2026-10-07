@@ -1,0 +1,17 @@
+# System & OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+
+# Editor & IDE
+.vscode/
+.idea/
+
+# Large raw archives
+*.zip
+
+# Windows Junction
+assets/image
+assets/image/

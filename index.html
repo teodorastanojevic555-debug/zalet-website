@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="sr" class="dark-theme">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ZALET // Streetwear Brend</title>
+  <meta name="description" content="Autentična streetwear odeća. Limitirane serije, vrhunski pamuk.">
+  <meta name="theme-color" content="#0A0A0A">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="ZALET // Streetwear Brend">
+  <meta property="og:description" content="Autentična streetwear odeća. Limitirane serije, vrhunski pamuk.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/zalet-official-logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/zalet-logo-badge-sq.png?v=2">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css?v=10">
+  <link rel="stylesheet" href="assets/css/telemetry.css?v=10">
+</head>
+<body>
+
+  <!-- Dynamic Atmospheric Background System -->
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-3" aria-hidden="true"></div>
+  <div class="mouse-glow-overlay" id="mouseGlowOverlay" aria-hidden="true"></div>
+  <div class="bg-watermark-wrap" aria-hidden="true">
+    <div class="bg-watermark-track">
+      <span>ZALET</span>
+      <span class="watermark-outline">CLUB</span>
+      <span>VELOCITY</span>
+      <span class="watermark-outline">ARCHIVE</span>
+      <span>ZALET</span>
+      <span class="watermark-outline">CLUB</span>
+      <span>VELOCITY</span>
+      <span class="watermark-outline">ARCHIVE</span>
+    </div>
+  </div>
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       TOP TELEMETRY MARQUEE TICKER
+       ========================================================================== -->
+  <aside class="telemetry-ticker" aria-label="Obaveštenja">
+    <div class="ticker-track">
+      <div class="ticker-item">
+        <span class="ticker-dot ticker-pulse"></span>
+        <span>BEOGRAD // DROP 01 AKTIVAN</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-dot"></span>
+        <span>POST EXPRESS 24-48H</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-dot ticker-pulse"></span>
+        <span>DIRECT DM @ZALETCLUB</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-dot ticker-pulse"></span>
+        <span>BEOGRAD // DROP 01 AKTIVAN</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-dot"></span>
+        <span>POST EXPRESS 24-48H</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-dot ticker-pulse"></span>
+        <span>DIRECT DM @ZALETCLUB</span>
+      </div>
+
+      <!-- Duplicate for infinite seamless scroll -->
+      <div class="ticker-item" aria-hidden="true">
+        <span class="ticker-dot ticker-pulse"></span>
+        <span>BEOGRAD // DROP 01 AKTIVAN</span>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <span class="ticker-dot"></span>
+        <span>POST EXPRESS 24-48H</span>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <span class="ticker-dot ticker-pulse"></span>
+        <span>DIRECT DM @ZALETCLUB</span>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <span class="ticker-dot ticker-pulse"></span>
+        <span>BEOGRAD // DROP 01 AKTIVAN</span>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <span class="ticker-dot"></span>
+        <span>POST EXPRESS 24-48H</span>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <span class="ticker-dot ticker-pulse"></span>
+        <span>DIRECT DM @ZALETCLUB</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       GLOBAL STICKY HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+
+      <!-- Left: Brand Logo & Wordmark -->
+      <a href="#" class="brand-logo-wrap" aria-label="ZALET Home">
+        <img src="assets/images/zalet-logo-badge-sq.png?v=2" alt="ZALET Logo" class="brand-logo-img">
+        <img src="assets/images/zalet-wordmark-white.png" alt="zalet" class="brand-wordmark-img">
+        <span class="brand-tag">CLUB</span>
+      </a>
+
+      <!-- Center: Main Navigation -->
+      <nav class="main-nav" aria-label="Glavna navigacija">
+        <a href="#shop" class="nav-link active">PRODAVNICA</a>
+        <a href="#size-guide" class="nav-link" id="navSizeGuideLink">VELIČINE</a>
+        <a href="#order-shipping" class="nav-link">PORUČIVANJE</a>
+        <a href="#manifesto" class="nav-link">O NAMA</a>
+      </nav>
+
+      <!-- Right: Actions (Audio, Currency, Cart, Mobile Toggle) -->
+      <div class="header-actions">
+
+        <!-- Audio Telemetry Toggle (F1 Team Radio) -->
+        <button type="button" class="audio-toggle-btn" id="audioToggleBtn" title="F1 PIT RADIO // Klikni za radio vezu i zvuk" aria-label="F1 Team Radio">
+          <span class="sound-waves" aria-hidden="true">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </span>
+          <span class="font-mono" style="font-size: 0.65rem;">RADIO</span>
+        </button>
+
+        <!-- Currency Switcher (RSD / EUR) -->
+        <div class="currency-switcher" role="group" aria-label="Izbor valute">
+          <button type="button" class="currency-btn active" data-currency="RSD">RSD</button>
+          <button type="button" class="currency-btn" data-currency="EUR">EUR</button>
+        </div>
+
+        <!-- Cart Trigger Button -->
+        <button type="button" class="cart-trigger-btn" id="cartTriggerBtn" aria-label="Otvori korpu">
+          <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="font-mono" style="font-size: 0.72rem; letter-spacing: 0.05em;">KORPA</span>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Otvori meni">
+          <span class="mobile-menu-bar"></span>
+          <span class="mobile-menu-bar"></span>
+          <span class="mobile-menu-bar"></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE FULLSCREEN NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <div class="brand-logo-wrap">
+        <img src="assets/images/zalet-logo-badge-sq.png?v=2" alt="ZALET Logo" class="brand-logo-img">
+        <img src="assets/images/zalet-wordmark-white.png" alt="zalet" class="brand-wordmark-img">
+        <span class="brand-tag">CLUB</span>
+      </div>
+      <button type="button" class="cart-close-btn" id="mobileNavCloseBtn" style="font-size: 1.5rem;" aria-label="Zatvori meni">✕</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li class="mobile-nav-item">
+        <a href="#shop"><span>// 01</span> PRODAVNICA</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#size-guide" id="mobileSizeGuideLink"><span>// 02</span> VELIČINE</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#order-shipping"><span>// 03</span> PORUČIVANJE</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#manifesto"><span>// 04</span> O NAMA</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="https://www.instagram.com/zaletclub/" target="_blank" rel="noopener"><span>// 05</span> INSTAGRAM @ZALETCLUB</a>
+      </li>
+    </ul>
+
+    <div class="mobile-nav-footer">
+      <div class="mobile-currency-row">
+        <span class="mono-tag" style="font-size: 0.72rem; color: var(--text-gray-light); font-weight: 600;">VALUTA / CURRENCY:</span>
+        <div class="currency-switcher" role="group" aria-label="Izbor valute u meniju">
+          <button type="button" class="currency-btn active" data-currency="RSD">RSD</button>
+          <button type="button" class="currency-btn" data-currency="EUR">EUR</button>
+        </div>
+      </div>
+      <div class="mono-tag" style="color: var(--accent-orange);">POST EXPRESS DOSTAVA 24-48H // BEOGRAD HQ</div>
+      <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-muted);">Plaćanje pouzećem ili platnom karticom.</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION // HIGH VELOCITY MOTORSPORT EDITORIAL
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+
+        <!-- Left Column: Editorial Headline, Compact Stats & Actions -->
+        <div class="hero-intro-col">
+          
+          <!-- 1. Minimalist Technical Geo & Live Clock Strip -->
+          <div class="hero-geo-strip">
+            <span class="geo-text">BEOGRAD // 44.81° N, 20.46° E • <span id="liveClockEl">--:-- CET</span></span>
+            <span class="geo-live-tag">
+              <span class="telemetry-status-pulse"></span>
+              <span class="live-label">[LIVE]</span>
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            UHVATI<br>
+            SVOJ<br>
+            <span class="title-stroke">ZALET</span>
+          </h1>
+
+          <p class="hero-description">
+            Autentična silueta grada u pokretu. Nema kopiranja, samo čist zalet.
+          </p>
+
+          <!-- Compact Stats Row (3 clean items in a row) -->
+          <div class="hero-compact-stats">
+            <div class="compact-stat-item">
+              <span class="stat-bullet">•</span>
+              <span class="stat-text">VISOKOKVALITETAN PAMUK</span>
+            </div>
+            <div class="compact-stat-item">
+              <span class="stat-bullet">•</span>
+              <span class="stat-text">OVERSIZED BOXY</span>
+            </div>
+            <div class="compact-stat-item">
+              <span class="stat-bullet">•</span>
+              <span class="stat-text">LIMITIRANA SERIJA</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta-group">
+            <a href="#shop" class="btn-primary">
+              <span>ISTRAŽI KOLEKCIJU</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+            <a href="#manifesto" class="btn-secondary">
+              <span>O BRENDU</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: 3D Floating Mockup Carousel (Tee / Hoodie) -->
+        <div class="hero-showcase-col">
+          <div class="hero-3d-tee-stage" id="hero3dTeeStage" title="ZALET 3D MOCKUP // Prevlačenje ili strelice za promenu modela (Majica / Hoodie)">
+            
+            <!-- Floating Header Bar: Badge + Model Switcher -->
+            <div class="mockup-header-bar">
+              <div class="tee-floating-badge" id="mockupModelBadge">
+                <span class="badge-dot"></span>
+                <span id="mockupBadgeText">DROP 01 // 3D MAJICA</span>
+              </div>
+              <div class="mockup-toggle-pills" role="tablist" aria-label="Izbor 3D modela">
+                <button type="button" class="mockup-toggle-btn active" data-index="0" id="mockupTabTee" aria-label="Prikaži 3D Majicu">MAJICA</button>
+                <button type="button" class="mockup-toggle-btn" data-index="1" id="mockupTabHoodie" aria-label="Prikaži 3D Hoodie">HOODIE</button>
+              </div>
+            </div>
+
+            <!-- Carousel Nav Arrows -->
+            <button type="button" class="mockup-nav-arrow mockup-arrow-prev" id="mockupPrevBtn" aria-label="Prethodni 3D model" title="Prethodni model">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="mockup-nav-arrow mockup-arrow-next" id="mockupNextBtn" aria-label="Sledeći 3D model" title="Sledeći model">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <!-- 3D Transform Wrapper -->
+            <div class="tee-3d-wrapper" id="tee3dWrapper">
+              <div class="mockup-slides-viewport" id="mockupSlidesViewport">
+                <!-- Slide 0: White Tee -->
+                <div class="mockup-slide active" data-index="0" data-badge="DROP 01 // 3D MAJICA">
+                  <img src="assets/images/zalet-3d-tee-mockup.png" alt="ZALET 3D Mockup Bela Majica" class="tee-3d-img" loading="eager" width="700" height="700">
+                </div>
+
+                <!-- Slide 1: White Hoodie -->
+                <div class="mockup-slide" data-index="1" data-badge="DROP 01 // 3D HOODIE">
+                  <img src="assets/images/zalet-3d-hoodie-mockup.png" alt="ZALET 3D Mockup Beli Duks" class="tee-3d-img" loading="eager" width="700" height="700">
+                </div>
+              </div>
+              
+              <!-- Subtle dynamic light reflection sheen -->
+              <div class="tee-glare-overlay" id="teeGlare"></div>
+            </div>
+
+            <!-- Realistic 3D Ground Shadow Underneath -->
+            <div class="tee-3d-shadow" id="tee3dShadow" aria-hidden="true"></div>
+
+            <!-- Carousel Pagination Dots & Swipe Hint -->
+            <div class="mockup-pagination" aria-label="Navigacija 3D prikaza">
+              <button type="button" class="mockup-dot active" data-index="0" aria-label="Model 1: Majica"></button>
+              <button type="button" class="mockup-dot" data-index="1" aria-label="Model 2: Hoodie"></button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PRODUCT CATALOG & GRID SECTION
+         ========================================================================== -->
+    <section class="shop-section" id="shop">
+      <div class="container">
+
+        <!-- Section Header with Category Tabs -->
+        <div class="section-header">
+          <div class="section-header-row">
+            <div>
+              <span class="section-pretitle">AKTUELNA KOLEKCIJA // DROP 01</span>
+              <h2 class="section-title">PRODAVNICA</h2>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="filter-tabs" role="tablist" aria-label="Kategorije proizvoda">
+              <button type="button" class="filter-btn active" data-filter="tees">MAJICE [19]</button>
+              <button type="button" class="filter-btn" data-filter="hoodies">HOODIE [7]</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Grid Container (populated dynamically via app.js) -->
+        <div class="products-grid" id="productsGrid" aria-live="polite">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ORDERING & CUSTOMER SUPPORT FLOW // WITH INSTAGRAM DM FALLBACK
+         ========================================================================== -->
+    <section class="order-flow-section" id="order-shipping">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-pretitle">// JEDNOSTAVNO I BRZO</span>
+          <h2 class="section-title">KAKO DO PORUDŽBINE</h2>
+        </div>
+
+        <!-- 3 Step Ordering Grid -->
+        <div class="order-steps-grid">
+          <div class="order-step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-title">IZABERI MODEL I VELIČINU</h3>
+            <p class="step-desc">
+              Izaberi omiljeni dizajn (S do XXL). Boxy oversized kroj koji savršeno pada.
+            </p>
+          </div>
+
+          <div class="order-step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-title">BRZA POST EXPRESS DOSTAVA</h3>
+            <p class="step-desc">
+              Slanje širom Srbije u roku od 24–48h na tvoju adresu ili paketomat.
+            </p>
+          </div>
+
+          <div class="order-step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-title">SIGURNO PLAĆANJE I ZAMENA</h3>
+            <p class="step-desc">
+              Plaćanje pouzećem ili karticom. Obezbeđena jednostavna zamena veličine u roku od 14 dana.
+            </p>
+          </div>
+        </div>
+
+        <!-- Instagram DM Direct Fallback Banner -->
+        <div class="dm-fallback-card">
+          <div class="dm-content-col">
+            <div class="dm-tag">
+              <span>•</span> DIREKTNA PODRŠKA
+            </div>
+            <h3 class="dm-headline">ŽELIŠ DA PORUČIŠ PREKO INSTAGRAMA?</h3>
+            <p class="dm-subtext">
+              Samo nam pošalji poruku u DM @zaletclub sa željenim modelom i podacima. Mi rešavamo ostalo.
+            </p>
+          </div>
+          <div>
+            <button type="button" class="btn-dm" onclick="window.ZaletApp.openDmModalForCart()">
+              <span>PORUČI PREKO DM-A @ZALETCLUB</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT SECTION // MINIMALIST BRAND MANIFESTO
+         ========================================================================== -->
+    <section class="manifesto-section" id="manifesto">
+      <div class="container manifesto-grid">
+
+        <div>
+          <span class="section-pretitle">// O NAMA // ARHIVA</span>
+          <h2 class="manifesto-quote">
+            STVORENO NA ASFALTU.<br><span>BEZ KOMPROMISA.</span>
+          </h2>
+          <p class="manifesto-body-text">
+            ZALET spaja ulični puls, težak 240+ GSM pamuk i beskompromisan boxy kroj. Garderoba za one koji drže sopstveni pravac.
+          </p>
+
+          <div class="manifesto-action-wrap">
+            <a href="https://www.instagram.com/zaletclub/" target="_blank" rel="noopener" class="btn-manifesto-highlight">
+              <span>ZAPRATI @ZALETCLUB</span>
+            </a>
+            <div class="manifesto-tech-stamp">
+              BEOGRAD ARCHIVE // 2026 • ALL RIGHTS RESERVED
+            </div>
+          </div>
+        </div>
+
+        <div class="manifesto-pillars">
+          <div class="pillar-card">
+            <div class="pillar-num">// 01 MATERIJAL</div>
+            <h3 class="pillar-title">240+ GSM BRUŠENI PAMUK</h3>
+            <p class="pillar-desc">Češljani teški pamuk sa strukturom koja ne gubi formu i ne skuplja se u pranju.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-num">// 02 SILUETA</div>
+            <h3 class="pillar-title">POJAČAN BOXY FIT</h3>
+            <p class="pillar-desc">Spuštena ramena i masivna rebrasta kragna koja drži definisanu, oštru liniju.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-num">// 03 KONCEPT</div>
+            <h3 class="pillar-title">LIMITIRANI DROP 01</h3>
+            <p class="pillar-desc">Ograničene serije.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       MINIMALIST FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-top-grid">
+
+        <!-- Brand Col -->
+        <div class="footer-brand-col">
+          <div class="brand-logo-wrap">
+            <img src="assets/images/zalet-logo-badge-sq.png?v=2" alt="ZALET Logo" class="brand-logo-img">
+            <img src="assets/images/zalet-wordmark-white.png" alt="zalet" class="brand-wordmark-img">
+            <span class="brand-tag">CLUB</span>
+          </div>
+          <div class="mono-tag" style="color: var(--accent-orange); margin-top: 16px;">
+            INSTAGRAM: <a href="https://www.instagram.com/zaletclub/" target="_blank" rel="noopener" style="text-decoration: underline;">@zaletclub</a>
+          </div>
+        </div>
+
+        <!-- Links Col 1 -->
+        <div>
+          <h4 class="footer-col-title">KOLEKCIJA</h4>
+          <ul class="footer-links-list">
+            <li><a href="#shop" class="footer-link">SVI MODELI</a></li>
+            <li><a href="#shop" class="footer-link">MAJICE</a></li>
+            <li><a href="#shop" class="footer-link">DUKSEVI</a></li>
+            <li><a href="#manifesto" class="footer-link">O NAMA</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Col 2 -->
+        <div>
+          <h4 class="footer-col-title">PODRŠKA</h4>
+          <ul class="footer-links-list">
+            <li><a href="#size-guide" class="footer-link" onclick="document.getElementById('sizeGuideModalOverlay').classList.add('open')">TABELA VELIČINA</a></li>
+            <li><a href="#order-shipping" class="footer-link">PORUČIVANJE</a></li>
+            <li><a href="https://www.instagram.com/zaletclub/" target="_blank" rel="noopener" class="footer-link">DM @ZALETCLUB</a></li>
+            <li><a href="mailto:info@zaletclub.com" class="footer-link">KONTAKT</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Col -->
+        <div>
+          <h4 class="footer-col-title">NOVI DROPOVI</h4>
+          <p style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-gray-light); margin-bottom: 12px;">
+            Prijavi se za obaveštenja o novim izdanjima:
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('ZALET // Uspešno ste prijavljeni.'); this.reset();">
+            <div class="newsletter-input-group">
+              <input type="email" class="newsletter-input" placeholder="UNESITE EMAIL ADRESU..." required>
+              <button type="submit" class="newsletter-submit-btn">PRIJAVA</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>© 2026 ZALET CLUB. SVA PRAVA ZADRŽANA.</div>
+        <div>BEOGRAD</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       DEDICATED PRODUCT DETAIL VIEW / PDP MODAL TEMPLATE
+       ========================================================================== -->
+  <div class="pdp-overlay" id="pdpOverlay" role="dialog" aria-modal="true" aria-label="Product Details">
+    <div class="pdp-container">
+      <button type="button" class="pdp-close-btn" id="pdpCloseBtn" aria-label="Close product view">✕</button>
+
+      <div class="pdp-layout">
+
+        <!-- Left: High-Res Interactive Gallery -->
+        <div class="pdp-gallery-col">
+          <div class="pdp-main-image-wrap" id="pdpMainImageWrap" title="Click or hover to zoom">
+            <img class="pdp-main-image" id="pdpMainImage" src="" alt="Product View">
+
+            <div class="pdp-gallery-nav-btns">
+              <button type="button" class="pdp-gallery-arrow" id="pdpPrevImgBtn" aria-label="Previous image">‹</button>
+              <button type="button" class="pdp-gallery-arrow" id="pdpNextImgBtn" aria-label="Next image">›</button>
+            </div>
+          </div>
+
+          <div class="pdp-thumbnails-row" id="pdpThumbnailsRow" aria-label="Image gallery thumbnails">
+            <!-- Thumbnails injected via JS -->
+          </div>
+
+          <div class="pdp-gallery-hint">
+            [ PREVUCI ILI KORISTI STRELICE ZA PREGLED DIZAJNA ]
+          </div>
+        </div>
+
+        <!-- Right: Product Info & Purchase Flow -->
+        <div class="pdp-info-col">
+          <div class="pdp-breadcrumbs" id="pdpBreadcrumbs">ZALET // ARCHIVE // DROP 01</div>
+
+          <h2 class="pdp-title" id="pdpTitle">PRODUCT TITLE</h2>
+
+          <div class="pdp-telemetry-strip">
+            <span class="mono-tag" id="pdpSku" style="color: var(--accent-orange);">ZL-01-CR</span>
+            <span class="card-badge" id="pdpEditionBadge">RUN 01 / 50</span>
+            <span class="pdp-lead-time">● 24-48h POST EXPRESS DISPATCH</span>
+          </div>
+
+          <div class="pdp-price-wrap">
+            <span class="pdp-price-main" id="pdpPriceMain">4,490 RSD</span>
+            <span class="pdp-price-secondary" id="pdpPriceSecondary">~€38.00</span>
+          </div>
+
+          <p class="pdp-description" id="pdpDescription">
+            Product technical description will appear here.
+          </p>
+
+          <!-- Sizing Selection -->
+          <div class="pdp-size-section">
+            <div class="pdp-size-header">
+              <span class="pdp-size-label">SELECT CHASSIS SIZE:</span>
+              <button type="button" class="pdp-size-guide-trigger" id="pdpSizeGuideTrigger">SIZE GUIDE & MEASUREMENTS</button>
+            </div>
+            <div class="pdp-size-options" id="pdpSizeOptions">
+              <!-- Sizes injected via JS -->
+            </div>
+            <div class="pdp-stockStatus" id="pdpStockStatus" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-green-telemetry); margin-top: 8px;">
+              // IN STOCK & READY FOR DISPATCH
+            </div>
+          </div>
+
+          <!-- Quantity & Add to Cart -->
+          <div class="pdp-action-row">
+            <div class="quantity-control" aria-label="Quantity selector">
+              <button type="button" class="qty-btn" id="pdpQtyMinus" aria-label="Decrease quantity">-</button>
+              <span class="qty-display" id="pdpQtyDisplay">1</span>
+              <button type="button" class="qty-btn" id="pdpQtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+
+            <button type="button" class="btn-primary pdp-add-btn" id="pdpAddBtn">
+              DODAJ U KORPU
+            </button>
+          </div>
+
+          <!-- Direct Instagram DM Button -->
+          <button type="button" class="btn-dm pdp-dm-btn" id="pdpDmBtn">
+            <span>PORUČIVANJE PREKO INSTAGRAMA</span>
+          </button>
+
+          <!-- Collapsible Accordions -->
+          <div class="pdp-accordions" id="pdpAccordions">
+            <!-- Injected via JS -->
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SLIDE-OUT CART DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay" role="dialog" aria-modal="true" aria-label="Pit Bag Cart">
+    <div class="cart-drawer" id="cartDrawer">
+
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">
+          <span>// PIT BAG</span>
+          <span class="mono-tag" style="color: var(--accent-orange);">DROP 01</span>
+        </h3>
+        <button type="button" class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">✕</button>
+      </div>
+
+      <!-- Free Shipping Progress Bar -->
+      <div class="shipping-meter-wrap">
+        <div class="shipping-meter-text" id="cartShippingMeterText">
+          <span>ADD FOR FREE POST EXPRESS</span>
+          <span>0%</span>
+        </div>
+        <div class="shipping-meter-bar">
+          <div class="shipping-meter-fill" id="cartShippingMeterFill"></div>
+        </div>
+      </div>
+
+      <!-- Items List -->
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Cart Drawer Footer -->
+      <div class="cart-drawer-footer">
+        <div class="cart-subtotal-row">
+          <span>SUBTOTAL:</span>
+          <span class="cart-subtotal-val" id="cartSubtotalVal">0 RSD</span>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-gray-muted);">
+          * Post Express shipping calculated at checkout (Free over 8,000 RSD / €70).
+        </div>
+
+        <button type="button" class="btn-primary" id="proceedCheckoutBtn" style="width: 100%;">
+          NASTAVI NA PORUČIVANJE [ → ]
+        </button>
+
+        <button type="button" class="btn-dm" id="cartInstagramDmBtn" style="width: 100%;">
+          <span>PORUČIVANJE PREKO INSTAGRAMA</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CHECKOUT MODAL // FAST ORDERING
+       ========================================================================== -->
+  <div class="checkout-modal-overlay" id="checkoutModalOverlay" role="dialog" aria-modal="true" aria-label="Checkout">
+    <div class="checkout-modal">
+      <button type="button" class="pdp-close-btn" id="checkoutCloseBtn" aria-label="Close checkout">✕</button>
+
+      <div class="section-header" style="margin-bottom: 20px;">
+        <span class="section-pretitle">POST EXPRESS FAST DISPATCH</span>
+        <h3 class="section-title" style="font-size: 1.6rem;">COMPLETE DISPATCH ORDER</h3>
+      </div>
+
+      <!-- Form -->
+      <form class="checkout-form" id="checkoutForm">
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label" for="fullName">IME I PREZIME *</label>
+            <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Npr. Marko Petrović" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">BROJ TELEFONA (ZA KURIRA) *</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="06X XXX XXXX" required>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label" for="city">GRAD I POŠTANSKI BROJ *</label>
+            <input type="text" id="city" name="city" class="form-input" placeholder="Npr. Beograd 11000" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="address">ULICA I BROJ STANA *</label>
+            <input type="text" id="address" name="address" class="form-input" placeholder="Npr. Bulevar Kralja Aleksandra 45/12" required>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label" for="shippingMethod">NAČIN ISPORUKE</label>
+            <select id="shippingMethod" name="shippingMethod" class="form-select">
+              <option value="Post Express (Danas za Sutra)">Post Express Srbija (24-48h Danas za Sutra)</option>
+              <option value="Post Express Paketomat">Post Express Paketomat (Preuzimanje 24/7)</option>
+              <option value="Lično Preuzimanje Beograd">Lično preuzimanje (Beograd Centar po dogovoru)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="paymentMethod">NAČIN PLAĆANJA</label>
+            <select id="paymentMethod" name="paymentMethod" class="form-select">
+              <option value="Plaćanje pouzećem (kuriru po prijemu)">Plaćanje pouzećem (gotovinom kuriru)</option>
+              <option value="Platna Kartica (Visa / Master / Dina)">Platna kartica (Visa / MasterCard / Dina)</option>
+              <option value="Direktna uplata na račun">Direktna uplata na račun (e-banking)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Order Summary Totals -->
+        <div style="background-color: var(--bg-surface); border: 1px solid var(--border-medium); padding: 18px; margin: 8px 0; font-family: var(--font-mono); font-size: 0.8rem; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; justify-content: space-between;">
+            <span>VREDNOST ARTIKALA:</span>
+            <span id="checkoutSubtotal">0 RSD</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>DOSTAVA (POST EXPRESS):</span>
+            <span id="checkoutShipping">350 RSD</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--accent-orange); border-top: 1px solid var(--border-dark); padding-top: 8px; font-size: 0.95rem;">
+            <span>UKUPNO ZA UPLATU:</span>
+            <span id="checkoutTotal">0 RSD</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%;">
+          POTVRDI I POŠALJI PORUDŽBINU // CONFIRM DISPATCH
+        </button>
+
+        <div style="text-align: center; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-muted);">
+          Podaci su šifrovani. Nakon potvrde, kontaktiraćemo vas putem SMS/poziva radi potvrde slanja.
+        </div>
+      </form>
+
+      <!-- Order Confirmation Screen -->
+      <div class="order-success-box" id="orderSuccessBox">
+        <div style="font-size: 3rem; color: var(--accent-green-telemetry);">✓</div>
+        <h3 style="font-family: var(--font-display); font-size: 1.5rem;">PORUDŽBINA JE USPEŠNO ZABELEŽENA!</h3>
+        <p style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-gray-light); max-width: 480px;">
+          Vaš nalog za Drop 01 je prosleđen u naš logistički centar u Beogradu. Pošiljka se pakuje u prepoznatljivo ZALET pakovanje i šalje putem Post Express kurirske službe.
+        </p>
+
+        <div id="orderSummaryWrap" style="width: 100%;"></div>
+
+        <button type="button" class="btn-primary" onclick="document.getElementById('checkoutModalOverlay').classList.remove('open'); document.body.classList.remove('lock-scroll');">
+          NAZAD NA SAJT // CONTINUE BROWSING
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       INSTAGRAM DM ORDER ASSISTANT MODAL
+       ========================================================================== -->
+  <div class="dm-modal-overlay" id="dmModalOverlay" role="dialog" aria-modal="true" aria-label="Order via Instagram DM">
+    <div class="dm-modal">
+      <button type="button" class="pdp-close-btn" id="dmModalCloseBtn" aria-label="Close DM assistant">✕</button>
+
+      <span class="mono-tag" style="color: #FD1D1D;">INSTAGRAM VIP CONCIERGE</span>
+      <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin: 8px 0 12px;">PORUDŽBINA PREKO INSTAGRAM DM-a</h3>
+      <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-gray-light); line-height: 1.6;">
+        Kopirajte pripremljenu porudžbinu ispod i pošaljite nam je u poruci na <strong style="color: #FFF;">@zaletclub</strong>. Odgovaramo odmah i rezervišemo vašu veličinu!
+      </p>
+
+      <div class="dm-template-box" id="dmTemplateBox">
+        <!-- Injected via JS -->
+      </div>
+
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <button type="button" class="btn-primary" id="copyDmTemplateBtn" style="flex: 1;">
+          KOPIRAJ TEKST PORUKE
+        </button>
+        <a href="https://www.instagram.com/zaletclub/" target="_blank" rel="noopener" class="btn-dm" id="directInstagramLink" style="flex: 1;">
+          OTVORI INSTAGRAM @ZALETCLUB
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       INTERACTIVE SIZE GUIDE & RECOMMENDER MODAL
+       ========================================================================== -->
+  <div class="size-guide-modal-overlay" id="sizeGuideModalOverlay" role="dialog" aria-modal="true" aria-label="Size Guide">
+    <div class="size-guide-modal">
+      <button type="button" class="pdp-close-btn" id="sizeGuideCloseBtn" aria-label="Close size guide">✕</button>
+
+      <span class="section-pretitle">TECHNICAL FIT SPECIFICATIONS</span>
+      <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 20px;">MOTORSPORT STREETWEAR SIZE GUIDE</h3>
+
+      <!-- Interactive Calculator -->
+      <div class="size-calculator-box">
+        <h4 class="calc-title">// INTERACTIVE FIT ADVISOR</h4>
+
+        <div class="calc-inputs-grid">
+          <div class="calc-slider-wrap">
+            <div class="calc-slider-header">
+              <span>YOUR HEIGHT:</span>
+              <strong id="heightValDisplay" style="color: var(--accent-orange);">182 cm</strong>
+            </div>
+            <input type="range" class="calc-slider" id="sizeHeightSlider" min="155" max="205" value="182">
+          </div>
+
+          <div class="calc-slider-wrap">
+            <div class="calc-slider-header">
+              <span>YOUR WEIGHT:</span>
+              <strong id="weightValDisplay" style="color: var(--accent-orange);">78 kg</strong>
+            </div>
+            <input type="range" class="calc-slider" id="sizeWeightSlider" min="50" max="120" value="78">
+          </div>
+        </div>
+
+        <div class="calc-result-badge">
+          <span>RECOMMENDED ZALET CHASSIS SIZE:</span>
+          <span class="calc-recommended-size" id="calcRecommendedSize">SIZE L</span>
+        </div>
+        <p id="calcAdviceText" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-light); margin-top: 8px;">
+          // Based on 182cm / 78kg: Size L delivers our intended relaxed motorsport boxy cut.
+        </p>
+      </div>
+
+      <!-- Heavyweight Tees Spec Table -->
+      <h4 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: 8px;">1. MAJICE (VISOKOKVALITETAN PAMUK)</h4>
+      <div class="table-scroll-hint"><span>[ ⇄ ]</span> PREVUCI TABELU ZA SVE MERE (CM)</div>
+      <div class="table-responsive">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>VELIČINA</th>
+              <th>ŠIRINA GRUDI (CM)</th>
+              <th>DUŽINA (CM)</th>
+              <th>SPUŠTENA RAMENA (CM)</th>
+              <th>RUKAV (CM)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>S</td><td>56</td><td>71</td><td>54</td><td>22</td></tr>
+            <tr><td>M</td><td>59</td><td>74</td><td>56</td><td>23</td></tr>
+            <tr><td>L</td><td>62</td><td>76</td><td>58</td><td>24</td></tr>
+            <tr><td>XL</td><td>65</td><td>78</td><td>60</td><td>25</td></tr>
+            <tr><td>XXL</td><td>68</td><td>80</td><td>62</td><td>26</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Heavyweight Hoodies Spec Table -->
+      <h4 style="font-family: var(--font-display); font-size: 0.95rem; margin: 24px 0 8px;">2. PREMIJUM DUKSEVI</h4>
+      <div class="table-scroll-hint"><span>[ ⇄ ]</span> PREVUCI TABELU ZA SVE MERE (CM)</div>
+      <div class="table-responsive">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>VELIČINA</th>
+              <th>ŠIRINA GRUDI (CM)</th>
+              <th>DUŽINA (CM)</th>
+              <th>SPUŠTENA RAMENA (CM)</th>
+              <th>DUŽINA RUKAVA (CM)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>S</td><td>60</td><td>68</td><td>58</td><td>62</td></tr>
+            <tr><td>M</td><td>63</td><td>71</td><td>61</td><td>64</td></tr>
+            <tr><td>L</td><td>66</td><td>74</td><td>64</td><td>66</td></tr>
+            <tr><td>XL</td><td>69</td><td>77</td><td>67</td><td>68</td></tr>
+            <tr><td>XXL</td><td>72</td><td>80</td><td>70</td><td>70</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-muted); margin-top: 16px;">
+        * Note on Fit: All garments are tailored in a boxy oversized motorsport silhouette with dropped shoulders. If you prefer a closer regular cut, order one size down.
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js?v=10"></script>
+  <script src="assets/js/app.js?v=10"></script>
+
+  <script>
+    // Header link smooth handling for Size Guide
+    document.getElementById('navSizeGuideLink')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('sizeGuideModalOverlay').classList.add('open');
+      document.body.classList.add('lock-scroll');
+    });
+    document.getElementById('mobileSizeGuideLink')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('mobileNavDrawer').classList.remove('open');
+      document.getElementById('sizeGuideModalOverlay').classList.add('open');
+      document.body.classList.add('lock-scroll');
+    });
+  </script>
+</body>
+</html>
