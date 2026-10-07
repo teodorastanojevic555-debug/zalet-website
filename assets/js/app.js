@@ -520,6 +520,11 @@
     checkoutModalOverlay: document.getElementById('checkoutModalOverlay'),
     checkoutCloseBtn: document.getElementById('checkoutCloseBtn'),
     checkoutForm: document.getElementById('checkoutForm'),
+    checkoutSubmitBtn: document.getElementById('checkoutSubmitBtn'),
+    checkoutErrorBox: document.getElementById('checkoutErrorBox'),
+    checkoutErrorMessage: document.getElementById('checkoutErrorMessage'),
+    checkoutRetryBtn: document.getElementById('checkoutRetryBtn'),
+    checkoutInstagramFallbackBtn: document.getElementById('checkoutInstagramFallbackBtn'),
     checkoutSubtotal: document.getElementById('checkoutSubtotal'),
     checkoutShipping: document.getElementById('checkoutShipping'),
     checkoutTotal: document.getElementById('checkoutTotal'),
@@ -1086,6 +1091,13 @@ Plaćanje: Pouzećem`;
     DOM.checkoutTotal.textContent = formatPrice(grandTotalRSD, grandTotalEUR);
 
     DOM.checkoutForm.style.display = 'flex';
+    if (DOM.checkoutSubmitBtn) {
+      DOM.checkoutSubmitBtn.disabled = false;
+      DOM.checkoutSubmitBtn.innerHTML = 'POTVRDI I POŠALJI PORUDŽBINU // CONFIRM DISPATCH';
+    }
+    if (DOM.checkoutErrorBox) {
+      DOM.checkoutErrorBox.style.display = 'none';
+    }
     DOM.orderSuccessBox.classList.remove('show');
     DOM.checkoutModalOverlay.classList.add('open');
     document.body.classList.add('lock-scroll');
@@ -1408,33 +1420,271 @@ Plaćanje: Pouzećem`;
 
     // Checkout Form Submit
     if (DOM.checkoutForm) {
-      DOM.checkoutForm.addEventListener('submit', (e) => {
+      DOM.checkoutForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        playSound('telemetry');
+
+        if (state.cart.length === 0) {
+          showToast('PIT BAG JE PRAZNA');
+          return;
+        }
 
         const formData = new FormData(DOM.checkoutForm);
-        const orderNumber = `ZL-${Math.floor(1000 + Math.random() * 9000)}`;
+        const fullName = (formData.get('fullName') || '').trim();
+        const phone = (formData.get('phone') || '').trim();
+        const address = (formData.get('address') || '').trim();
+        const city = (formData.get('city') || '').trim();
+        const postalCode = (formData.get('postalCode') || '').trim();
+        const note = (formData.get('note') || '').trim();
+        const shippingMethod = formData.get('shippingMethod') || 'Post Express (Danas za Sutra)';
+        const paymentMethod = formData.get('paymentMethod') || 'Plaćanje pouzećem (kuriru po prijemu)';
 
-        // Show success
-        DOM.checkoutForm.style.display = 'none';
-        DOM.orderSuccessBox.classList.add('show');
+        if (!fullName || !phone || !address || !city) {
+          showToast('MOLIMO POPUNITE SVA OBAVEZNA POLJA');
+          return;
+        }
 
-        const summaryHtml = `
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-medium); padding: 18px; margin: 16px 0; text-align: left; font-family: var(--font-mono); font-size: 0.8rem; width: 100%;">
-            <div style="color: var(--accent-orange); font-weight: 700; margin-bottom: 8px;">ORDER NUMBER: #${orderNumber}</div>
-            <div>CUSTOMER: ${formData.get('fullName') || 'Valued Collector'}</div>
-            <div>PHONE: ${formData.get('phone')}</div>
-            <div>DELIVERY: ${formData.get('address')}, ${formData.get('city')}</div>
-            <div>SHIPPING: Post Express (24-48h Danas za Sutra)</div>
-            <div>PAYMENT: ${formData.get('paymentMethod')}</div>
-          </div>
-        `;
+        const orderNumDigits = Math.floor(1000 + Math.random() * 9000);
+        const orderNumber = `ZL-${orderNumDigits}`;
+        const orderDate = new Date();
+        const formattedDateTime = orderDate.toLocaleString('sr-RS', {
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        });
 
-        DOM.orderSummaryWrap.innerHTML = summaryHtml;
+        const { totalRSD, totalEUR } = calculateCartTotals();
+        const isFree = state.currency === 'EUR' ? totalEUR >= state.freeShippingThresholdEUR : totalRSD >= state.freeShippingThresholdRSD;
+        const shippingFeeRSD = isFree ? 0 : 350;
+        const shippingFeeEUR = isFree ? 0 : 3.5;
+        const grandTotalRSD = totalRSD + shippingFeeRSD;
+        const grandTotalEUR = totalEUR + shippingFeeEUR;
 
-        // Clear cart
-        state.cart = [];
-        saveCart();
+        const cartSnapshot = JSON.parse(JSON.stringify(state.cart));
+
+        // Format ordered items for email notification table
+        const itemsFormattedList = cartSnapshot.map((item, idx) => {
+          return `${idx + 1}. ${item.title} | Vel: ${item.size} | Kol: ${item.quantity} | Cena: ${formatPrice(item.priceRSD * item.quantity, item.priceEUR * item.quantity)} [SKU: ${item.sku}]`;
+        }).join('\n');
+
+        const shippingFeeText = isFree ? 'BESPLATNO (0 RSD)' : (state.currency === 'EUR' ? '€3.50' : '350 RSD');
+        const grandTotalText = `${formatPrice(grandTotalRSD, grandTotalEUR)} (RSD: ${grandTotalRSD.toLocaleString('sr-RS')} RSD / EUR: €${grandTotalEUR.toFixed(2)})`;
+        const subtotalText = `${formatPrice(totalRSD, totalEUR)} (RSD: ${totalRSD.toLocaleString('sr-RS')} RSD / EUR: €${totalEUR.toFixed(2)})`;
+
+        // Payload for FormSubmit to deliver order to owner email
+        const orderPayload = {
+          _subject: `Nova ZALET Porudžbina #${orderNumber} - ${fullName}`,
+          _template: 'table',
+          _captcha: 'false',
+          'Broj Porudžbine': `#${orderNumber}`,
+          'Datum i Vreme': formattedDateTime,
+          'Kupac': fullName,
+          'Telefon': phone,
+          'Adresa za Isporuku': address,
+          'Grad': city,
+          'Poštanski Broj': postalCode || 'Nije navedeno',
+          'Napomena': note || 'Nema napomene',
+          'Način Isporuke': shippingMethod,
+          'Način Plaćanja': paymentMethod,
+          'Naručeni Artikli': itemsFormattedList,
+          'Vrednost Artikala': subtotalText,
+          'Trošak Dostave': shippingFeeText,
+          'UKUPNO ZA NAPLATU': grandTotalText
+        };
+
+        // Loading state on submit button
+        const submitBtn = DOM.checkoutSubmitBtn || DOM.checkoutForm.querySelector('button[type="submit"]');
+        const defaultBtnHtml = 'POTVRDI I POŠALJI PORUDŽBINU // CONFIRM DISPATCH';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'OBRADA PORUDŽBINE...';
+        }
+        if (DOM.checkoutErrorBox) {
+          DOM.checkoutErrorBox.style.display = 'none';
+        }
+
+        try {
+          const response = await fetch('https://formsubmit.co/ajax/teodorastanojevic555@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(orderPayload)
+          });
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+
+          const responseData = await response.json();
+          if (responseData && (responseData.success === false || responseData.success === 'false')) {
+            throw new Error(responseData.message || 'Server je odbio porudžbinu.');
+          }
+
+          // --- SUCCESS ---
+          // Save order to localStorage.zalet_orders
+          const orderRecord = {
+            orderNumber: `#${orderNumber}`,
+            date: orderDate.toISOString(),
+            formattedDate: formattedDateTime,
+            customer: {
+              fullName,
+              phone,
+              address,
+              city,
+              postalCode,
+              note,
+              shippingMethod,
+              paymentMethod
+            },
+            items: cartSnapshot,
+            totals: {
+              subtotalRSD: totalRSD,
+              subtotalEUR: totalEUR,
+              shippingFeeRSD: shippingFeeRSD,
+              shippingFeeEUR: shippingFeeEUR,
+              grandTotalRSD: grandTotalRSD,
+              grandTotalEUR: grandTotalEUR,
+              currency: state.currency
+            }
+          };
+
+          try {
+            const existingOrders = JSON.parse(localStorage.getItem('zalet_orders') || '[]');
+            existingOrders.unshift(orderRecord);
+            localStorage.setItem('zalet_orders', JSON.stringify(existingOrders));
+          } catch (storageErr) {
+            console.warn('Greška pri čuvanju porudžbine u localStorage:', storageErr);
+          }
+
+          // Build summary HTML for confirmation box
+          const itemsSummaryHtml = cartSnapshot.map(item => `
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.78rem; color: var(--text-gray-light);">
+              <span>${item.quantity}x ${item.title} (${item.size})</span>
+              <span style="color: #fff; font-weight: 600;">${formatPrice(item.priceRSD * item.quantity, item.priceEUR * item.quantity)}</span>
+            </div>
+          `).join('');
+
+          const summaryHtml = `
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-medium); padding: 18px; margin: 16px 0; text-align: left; font-family: var(--font-mono); font-size: 0.8rem; width: 100%;">
+              <div style="color: var(--accent-orange); font-weight: 700; font-size: 1.05rem; margin-bottom: 10px;">BROJ PORUDŽBINE: #${orderNumber}</div>
+              <div style="margin-bottom: 4px;"><strong style="color: #fff;">KUPAC:</strong> ${fullName}</div>
+              <div style="margin-bottom: 4px;"><strong style="color: #fff;">TELEFON:</strong> ${phone}</div>
+              <div style="margin-bottom: 4px;"><strong style="color: #fff;">ADRESA ZA ISPORUKU:</strong> ${address}, ${postalCode ? postalCode + ' ' : ''}${city}</div>
+              ${note ? `<div style="margin-bottom: 4px;"><strong style="color: #fff;">NAPOMENA:</strong> ${note}</div>` : ''}
+              <div style="margin-bottom: 4px;"><strong style="color: #fff;">NAČIN DOSTAVE:</strong> ${shippingMethod}</div>
+              <div style="margin-bottom: 8px;"><strong style="color: #fff;">NAČIN PLAĆANJA:</strong> ${paymentMethod}</div>
+              <div style="border-top: 1px dashed var(--border-dark); margin: 10px 0; padding-top: 8px;">
+                <strong style="color: #fff; display: block; margin-bottom: 6px;">PORUČENI ARTIKLI:</strong>
+                ${itemsSummaryHtml}
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-gray-muted); margin-bottom: 4px;">
+                <span>DOSTAVA:</span>
+                <span>${shippingFeeText}</span>
+              </div>
+              <div style="border-top: 1px solid var(--border-dark); padding-top: 8px; font-weight: 700; color: var(--accent-orange); display: flex; justify-content: space-between; font-size: 0.95rem;">
+                <span>UKUPNO ZA UPLATU:</span>
+                <span>${formatPrice(grandTotalRSD, grandTotalEUR)}</span>
+              </div>
+            </div>
+          `;
+
+          DOM.orderSummaryWrap.innerHTML = summaryHtml;
+
+          // Display success box and hide checkout form
+          DOM.checkoutForm.style.display = 'none';
+          DOM.orderSuccessBox.classList.add('show');
+
+          // Clear cart
+          state.cart = [];
+          saveCart();
+
+          // Reset submit button state
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = defaultBtnHtml;
+          }
+
+          // Play telemetry sound
+          playSound('telemetry');
+          showToast(`PORUDŽBINA #${orderNumber} USPEŠNO ZABELEŽENA!`);
+
+        } catch (error) {
+          console.error('Checkout dispatch error:', error);
+
+          // Restore submit button
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = defaultBtnHtml;
+          }
+
+          // Show error fallback container
+          if (DOM.checkoutErrorBox) {
+            DOM.checkoutErrorBox.style.display = 'block';
+            if (DOM.checkoutErrorMessage) {
+              DOM.checkoutErrorMessage.textContent = 'Došlo je do greške u povezivanju sa serverom. Vaši podaci i artikli u korpi su sačuvani! Možete pokušati ponovo ili poslati porudžbinu preko Instagram DM-a.';
+            }
+          }
+
+          // Prepare Instagram DM fallback text with entered details
+          const fallbackDmText =
+`Pozdrav @zaletclub! Došlo je do greške pri slanju preko sajta, šaljem porudžbinu direktno:
+------------------------------------------
+BROJ PORUDŽBINE: #${orderNumber}
+------------------------------------------
+ARTIKLI:
+${itemsFormattedList}
+------------------------------------------
+UKUPNO: ${formatPrice(grandTotalRSD, grandTotalEUR)}
+DOSTAVA: ${shippingMethod}
+PLAĆANJE: ${paymentMethod}
+------------------------------------------
+PODACI ZA ISPORUKU:
+Ime i Prezime: ${fullName}
+Telefon: ${phone}
+Adresa: ${address}
+Grad: ${city}${postalCode ? ' (' + postalCode + ')' : ''}
+${note ? `Napomena: ${note}\n` : ''}`;
+
+          if (DOM.dmTemplateBox) {
+            DOM.dmTemplateBox.textContent = fallbackDmText;
+          }
+
+          showToast('GREŠKA PRI SLANJU PORUDŽBINE - POKUŠAJTE PONOVO ILI PREKO DM-a');
+        }
+      });
+    }
+
+    // Checkout Error Retry Button
+    if (DOM.checkoutRetryBtn) {
+      DOM.checkoutRetryBtn.addEventListener('click', () => {
+        if (DOM.checkoutErrorBox) {
+          DOM.checkoutErrorBox.style.display = 'none';
+        }
+        if (DOM.checkoutForm) {
+          if (typeof DOM.checkoutForm.requestSubmit === 'function') {
+            DOM.checkoutForm.requestSubmit();
+          } else {
+            DOM.checkoutForm.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+          }
+        }
+      });
+    }
+
+    // Checkout Error Instagram Fallback Button
+    if (DOM.checkoutInstagramFallbackBtn) {
+      DOM.checkoutInstagramFallbackBtn.addEventListener('click', () => {
+        if (DOM.checkoutModalOverlay) {
+          DOM.checkoutModalOverlay.classList.remove('open');
+        }
+        if (DOM.dmModalOverlay) {
+          DOM.dmModalOverlay.classList.add('open');
+          document.body.classList.add('lock-scroll');
+        }
+        playSound('click');
       });
     }
 

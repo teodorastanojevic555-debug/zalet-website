@@ -738,15 +738,25 @@
           </div>
         </div>
 
+        <div class="form-group">
+          <label class="form-label" for="address">ULICA I BROJ STANA (ADRESA ZA ISPORUKU) *</label>
+          <input type="text" id="address" name="address" class="form-input" placeholder="Npr. Bulevar Kralja Aleksandra 45/12" required>
+        </div>
+
         <div class="form-row-2">
           <div class="form-group">
-            <label class="form-label" for="city">GRAD I POŠTANSKI BROJ *</label>
-            <input type="text" id="city" name="city" class="form-input" placeholder="Npr. Beograd 11000" required>
+            <label class="form-label" for="city">GRAD / MESTO *</label>
+            <input type="text" id="city" name="city" class="form-input" placeholder="Npr. Beograd" required>
           </div>
           <div class="form-group">
-            <label class="form-label" for="address">ULICA I BROJ STANA *</label>
-            <input type="text" id="address" name="address" class="form-input" placeholder="Npr. Bulevar Kralja Aleksandra 45/12" required>
+            <label class="form-label" for="postalCode">POŠTANSKI BROJ</label>
+            <input type="text" id="postalCode" name="postalCode" class="form-input" placeholder="Npr. 11000">
           </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="note">NAPOMENA ZA DOSTAVU (OPCIONO)</label>
+          <input type="text" id="note" name="note" class="form-input" placeholder="Npr. Interfon 12, zvati pre isporuke...">
         </div>
 
         <div class="form-row-2">
@@ -784,9 +794,27 @@
           </div>
         </div>
 
-        <button type="submit" class="btn-primary" style="width: 100%;">
+        <button type="submit" id="checkoutSubmitBtn" class="btn-primary" style="width: 100%;">
           POTVRDI I POŠALJI PORUDŽBINU // CONFIRM DISPATCH
         </button>
+
+        <!-- Checkout Error Message Container -->
+        <div id="checkoutErrorBox" style="display: none; background: rgba(255, 45, 85, 0.12); border: 1px solid var(--accent-red); padding: 14px; margin-top: 8px; font-family: var(--font-mono); font-size: 0.8rem; color: #fff; text-align: left;">
+          <div style="font-weight: 700; color: var(--accent-red); margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+            <span>⚠️</span> <span>GREŠKA PRI SLANJU PORUDŽBINE</span>
+          </div>
+          <p id="checkoutErrorMessage" style="margin-bottom: 12px; line-height: 1.4; color: var(--text-gray-light); font-size: 0.76rem;">
+            Došlo je do greške u povezivanju sa serverom. Vaši podaci i artikli su sačuvani! Možete pokušati ponovo ili odmah poslati porudžbinu preko Instagram profila.
+          </p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" id="checkoutRetryBtn" class="btn-primary" style="padding: 10px 14px; font-size: 0.72rem;">
+              POKUŠAJ PONOVO // RETRY
+            </button>
+            <button type="button" id="checkoutInstagramFallbackBtn" class="btn-dm" style="padding: 10px 14px; font-size: 0.72rem;">
+              PORUČI PREKO INSTAGRAM DM-a
+            </button>
+          </div>
+        </div>
 
         <div style="text-align: center; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-muted);">
           Podaci su šifrovani. Nakon potvrde, kontaktiraćemo vas putem SMS/poziva radi potvrde slanja.
@@ -939,7 +967,7 @@
 
   <!-- Scripts -->
   <script src="assets/js/products.js?v=10"></script>
-  <script src="assets/js/app.js?v=10"></script>
+  <script src="assets/js/app.js?v=11"></script>
 
   <script>
     // Header link smooth handling for Size Guide
