@@ -8,6 +8,7 @@ desktop.ini
 # Editor & IDE
 .vscode/
 .idea/
+.agents/
 
 # Large raw archives
 *.zip
