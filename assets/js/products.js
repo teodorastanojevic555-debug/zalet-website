@@ -17,7 +17,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 18,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Autodromo Internazionale del Mugello special edition. Diskretan Zalet Racing Club Mugello \'26 natpis na grudima, sa živopisnim trkačkim printom crvenih bolida kroz čemprese i zvaničnim koordinatama staze na leđima. Visokokvalitetan pamuk sa dvostrukim štepom i ojačanom kragnom.',
     images: [
       'assets/images/tees/tee-01-back.jpg',
@@ -65,7 +65,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 14,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'FIA Formula 1 Technical Regulations Blueprint. Minimalistički ZALET wordmark na grudima, dok zadnji panel prikazuje kompletan tehnički šematski nacrt F1 aero-šasije sa telemetrijskim kotama i podacima.',
     images: [
       'assets/images/tees/tee-02-back.jpg',
@@ -113,7 +113,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 12,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Duboka trkačka crna podloga sa suptilnim ZALET chest brendingom. Leđni panel dominira vertikalnim PORSCHE ispisom presečenim bočnim profilom 992 GT3 RS sa karbonskim krilom.',
     images: [
       'assets/images/tees/tee-03-back.jpg',
@@ -161,7 +161,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 16,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Najtraženiji model kolekcije! Plavi ZALET CARRERA R02 logo na prednjem delu, dok leđa krasi Sally Carrera i upečatljiv slogan "YOU HAVE MY HEART RACING!" sa fabričkim specifikacijama i podacima o motoru.',
     images: [
       'assets/images/tees/tee-04-back.jpg',
@@ -209,7 +209,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 15,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Crveni Zalet Team 95 McQueen natpis na grudima, sa kultnim Lightning McQueenom na leđima i natpisom "YOU MAKE MY HEART GO KACHOW!" sa performansnim specifikacijama (0-60 za 4 sekunde, 750 HP).',
     images: [
       'assets/images/tees/tee-05-back.jpg',
@@ -257,7 +257,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 19,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Vrhunac automobilskog inženjeringa na jednoj majici: Porsche 918 (887 HP), McLaren P1 (903 HP) i LaFerrari (950 HP). "Zalet club archive // chassis dynamics - aerodynamic drag reduced to zero".',
     images: [
       'assets/images/tees/tee-07-front.jpg',
@@ -305,7 +305,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 14,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Scuderia Ferrari Formula 1 Team Fig. 6 tehnički dijagram. Ilustracija F1 bolida u trkačkoj crvenoj boji, okružena aerodinamičkim nacrtima odozgo i sa strane sa arhivskim podacima tima.',
     images: [
       'assets/images/tees/tee-08-front.jpg',
@@ -353,7 +353,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 13,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Posveta najvećem trkaču svih vremena: Ayrton Senna, njegova prepoznatljiva žuta kaciga i šampionski bolid McLaren MP4/4 iz sezone 1988 sa Senna citatom: "Winning a race is a much bigger challenge than winning a million dollars."',
     images: [
       'assets/images/tees/tee-09-front.jpg',
@@ -401,7 +401,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 17,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Lewis Hamilton u crvenoj Ferrari eri: "A partnership of legends. The seven-time world champion meets the most iconic team in Formula 1 history." Upečatljiv crveni ispis, kaciga i bolid sa italijanskom trobojkom.',
     images: [
       'assets/images/tees/tee-10-front.jpg',
@@ -449,7 +449,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 15,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Najpoznatija zadnjica u istoriji JDM kulture: Toyota Supra MK4 presečena vertikalnim SUPRA ispisom i japanskim crvenim suncem. Brutalan kontrast i čist ulični stav.',
     images: [
       'assets/images/tees/tee-11-front.jpg',
@@ -497,7 +497,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 12,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Bery Racing Porsche 911 GT3 RS u upečatljivoj roze trkačkoj ediciji sa natpisom BERY RACING i tehničkim tekstom o pomeranju granica brzine na trkačkoj stazi.',
     images: [
       'assets/images/tees/tee-12-front.jpg',
@@ -545,7 +545,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 20,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Jedan od najviralnijih komada sa Zalet Instagrama! Ulični grafit ispis u drip stilu: "NEED Money for Porsche". Jednostavno, direktno i sa jasnim ciljem.',
     images: [
       'assets/images/tees/tee-13-front.jpg',
@@ -593,7 +593,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 16,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: '"DAILY REMINDER // No Risk. NO STORY." Teška bela pamučna majica sa monohromatskom trkačkom kacigom i brutalističkim sloganom.',
     images: [
       'assets/images/tees/tee-14-front.jpg',
@@ -641,7 +641,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 14,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Arhitektonski minimalizam. Reč ACTUALLY koja se produžava u vertikalnu liniju do snažne poruke YOU CAN u donjem uglu. Čista brutalistička tipografija.',
     images: [
       'assets/images/tees/tee-15-front.jpg',
@@ -689,7 +689,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 15,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: '"AI DOESN\'T THINK. IT CALCULATES. THE VISION IS YOURS." Snažan statement komad za kreatore, dizajnere i inženjere nove ere.',
     images: [
       'assets/images/tees/tee-16-front.jpg',
@@ -737,7 +737,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 18,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: '"EVERY THING IS UNDER [Ctrl]". Tipografski komad sa 3D tasterom u karakterističnoj ZALET narandžastoj boji. Pametna igra reči i autentičan stil.',
     images: [
       'assets/images/tees/tee-17-front.jpg',
@@ -785,7 +785,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 13,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: '"Life Is a Simulation // Flamboyant" sa realističnom teksturom žute teniske loptice i arhivskim tekstom o vizuelnoj percepciji na televizijskim prenosima.',
     images: [
       'assets/images/tees/tee-18-front.jpg',
@@ -833,7 +833,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 17,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: '"COOL GIRLS WATCH Formula 1 // ZALET CLUB Racing Team". Crna edicija omiljenog dizajna sa prefinjenom modnom tipografijom na teškom brušenom pamuku.',
     images: [
       'assets/images/tees/tee-19-front.jpg',
@@ -881,7 +881,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 20,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Originalna bela verzija modela "Cool girls watch formula 1". Izrađena od visokokvalitetnog češljanog pamuka sa čistim prednjim i leđnim padom.',
     images: [
       'assets/images/tees/tee-20-front.jpg',
@@ -930,7 +930,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 15,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Autentični Zalet oversized hoodie u mat crnoj boji. Minimalistički, upečatljiv vertikalni "BORN TO BE Different" print duž leđa. Izrađen od vrhunskog teškog češljanog pamuka sa mekanom brušenom unutrašnjošću, masivnim elastičnim ranflama i prostranim prednjim džepom.',
     images: [
       'assets/images/hoodies/hoodie-01-front.jpg',
@@ -977,7 +977,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 14,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Geometrijski statement komad. Izometrična 3D kocka sa tipografskim motivom "BE REAL." na grudima. Vrhunski pamuk sa ojačanom kapuljačom i duplim proštepom duž svih šavova.',
     images: [
       'assets/images/hoodies/hoodie-02-front.jpg',
@@ -1024,7 +1024,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 12,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Ekskluzivni svetli model sa leđnim motivom "THINK OUTSIDE THE BOX" i prepoznatljivim crvenim akcentom preko iks-oks matrice. Gusto tkanje koje drži formu kapuljače bez padanja.',
     images: [
       'assets/images/hoodies/hoodie-03-front.jpg',
@@ -1071,7 +1071,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 16,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Crni duks sa perspektivnim motivom trkačke piste "ALL YOUR WAY UP / POSITIVE" u belo-žutom kontrastu. Masivna silueta, duboka dvoslojna kapuljača i ojačana ranfla oko struka.',
     images: [
       'assets/images/hoodies/hoodie-04-front.jpg',
@@ -1118,7 +1118,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 15,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Beli duks inspirisan uličnom estetikom. Zalet Klub diskretan logo iznad upečatljivog plavog cvetnog motiva i slogana "ABUSE OF FLOWER COMES AS NO SURPRISE / The Flower".',
     images: [
       'assets/images/hoodies/hoodie-05-front.jpg',
@@ -1165,7 +1165,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 14,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Klasični beli "UNLIMITED / MAKE EVERYTHING POSSIBLE" hoodie sa crveno-crnim logotipom na grudima. Skaterska i tarmac estetika stvorena za svakodnevno nošenje u pokretu.',
     images: [
       'assets/images/hoodies/hoodie-06-front.jpg',
@@ -1212,7 +1212,7 @@ const PRODUCTS_DATA = [
     badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 18,
-    leadTime: '24-48h Post Express',
+    leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Upečatljiv pop-art motiv dalmatinca sa naočarima za sunce i žutom maramom na trkačkim crveno-belim prugama na leđima. Visokodefinisana sito-štampa na 100% teškom brušenom pamuku.',
     images: [
       'assets/images/hoodies/hoodie-07-front.jpg',

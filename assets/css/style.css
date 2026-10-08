@@ -52,9 +52,9 @@
 
   --z-ticker: 100;
   --z-header: 90;
-  --z-drawer: 200;
   --z-modal: 300;
-  --z-toast: 400;
+  --z-drawer: 350;
+  --z-toast: 500;
 }
 
 /* Base Reset & Smoothness */
@@ -2518,6 +2518,62 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   color: var(--accent-orange);
 }
 
+/* Cart Notification Banner */
+.cart-notif-banner {
+  background: linear-gradient(135deg, rgba(255, 75, 0, 0.18), rgba(0, 230, 118, 0.16));
+  border-bottom: 1px solid var(--accent-orange);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: notifSlideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cart-notif-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-green-telemetry);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.cart-notif-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cart-notif-title {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent-green-telemetry);
+  letter-spacing: 0.04em;
+}
+
+.cart-notif-item {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-white);
+}
+
+@keyframes notifSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Free Shipping Meter */
 .shipping-meter-wrap {
   padding: 12px 24px;
@@ -2669,7 +2725,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   height: 100%;
   background-color: rgba(10, 10, 10, 0.94);
   backdrop-filter: blur(14px);
-  z-index: var(--z-modal);
+  z-index: 400;
   display: flex;
   align-items: center;
   justify-content: center;

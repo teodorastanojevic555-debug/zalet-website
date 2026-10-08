@@ -484,11 +484,15 @@
     cartDrawerOverlay: document.getElementById('cartDrawerOverlay'),
     cartDrawer: document.getElementById('cartDrawer'),
     cartCloseBtn: document.getElementById('cartCloseBtn'),
+    cartNotifBanner: document.getElementById('cartNotifBanner'),
+    cartNotifItem: document.getElementById('cartNotifItem'),
     cartItemsList: document.getElementById('cartItemsList'),
     cartSubtotalVal: document.getElementById('cartSubtotalVal'),
+    cartTotalCountVal: document.getElementById('cartTotalCountVal'),
     cartShippingMeterFill: document.getElementById('cartShippingMeterFill'),
     cartShippingMeterText: document.getElementById('cartShippingMeterText'),
     proceedCheckoutBtn: document.getElementById('proceedCheckoutBtn'),
+    cartContinueShoppingBtn: document.getElementById('cartContinueShoppingBtn'),
     cartInstagramDmBtn: document.getElementById('cartInstagramDmBtn'),
     
     // PDP Elements
@@ -708,6 +712,17 @@
       DOM.cartBadge.classList.add('bounce');
       setTimeout(() => DOM.cartBadge.classList.remove('bounce'), 350);
     }
+
+    // Show Confirmation in Cart Drawer and Open Slider sa strane
+    if (DOM.cartNotifBanner && DOM.cartNotifItem) {
+      DOM.cartNotifItem.textContent = `${product.title} // Veličina: ${size} (${quantity} kom.)`;
+      DOM.cartNotifBanner.style.display = 'flex';
+    }
+
+    if (DOM.cartDrawerOverlay) {
+      DOM.cartDrawerOverlay.classList.add('open');
+      document.body.classList.add('lock-scroll');
+    }
   }
 
   function removeFromCart(index) {
@@ -749,6 +764,11 @@
       DOM.cartBadge.textContent = count;
     }
 
+    // Total quantity count in drawer
+    if (DOM.cartTotalCountVal) {
+      DOM.cartTotalCountVal.textContent = `${count} ${count === 1 ? 'komad' : 'komada'}`;
+    }
+
     // Subtotal in drawer
     if (DOM.cartSubtotalVal) {
       DOM.cartSubtotalVal.textContent = formatPrice(totalRSD, totalEUR);
@@ -764,7 +784,7 @@
 
       if (current >= threshold) {
         DOM.cartShippingMeterText.innerHTML = `
-          <span style="color: var(--accent-green-telemetry);">✓ BESPLATNA POST EXPRESS DOSTAVA OSTVARENA!</span>
+          <span style="color: var(--accent-green-telemetry);">✓ BESPLATNA DOSTAVA NA KUĆNU ADRESU OSTVARENA!</span>
           <span>100%</span>
         `;
         DOM.cartShippingMeterFill.style.backgroundColor = 'var(--accent-green-telemetry)';
@@ -782,33 +802,38 @@
     // Items list
     if (DOM.cartItemsList) {
       if (state.cart.length === 0) {
+        if (DOM.cartNotifBanner) DOM.cartNotifBanner.style.display = 'none';
         DOM.cartItemsList.innerHTML = `
           <div class="cart-empty-state">
             <span style="font-family: var(--font-brand); font-size: 2.2rem; color: #333;">ZL//00</span>
             <p style="font-family: var(--font-display); font-size: 0.85rem; color: var(--text-white);">VAŠA KORPA JE TRENUTNO PRAZNA</p>
             <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-muted);">Istražite Drop 01 komade od teškog pamuka i osigurajte svoju veličinu na vreme.</p>
-            <button type="button" class="btn-secondary" style="font-size: 0.75rem; padding: 10px 18px;" onclick="document.getElementById('cartDrawerOverlay').classList.remove('open')">POVRATAK U PRODAVNICU</button>
+            <button type="button" class="btn-secondary" style="font-size: 0.75rem; padding: 10px 18px;" onclick="document.getElementById('cartDrawerOverlay').classList.remove('open'); document.body.classList.remove('lock-scroll');">POVRATAK U PRODAVNICU</button>
           </div>
         `;
         if (DOM.proceedCheckoutBtn) DOM.proceedCheckoutBtn.disabled = true;
       } else {
         DOM.cartItemsList.innerHTML = state.cart.map((item, index) => {
           const itemPriceFormatted = formatPrice(item.priceRSD * item.quantity, item.priceEUR * item.quantity);
+          const singlePriceFormatted = formatPrice(item.priceRSD, item.priceEUR);
           return `
             <div class="cart-item">
               <img class="cart-item-thumb" src="${item.image}" alt="${item.title}">
               <div class="cart-item-info">
-                <span class="mono-tag" style="color: var(--accent-orange); font-size: 0.62rem;">${item.sku} // VEL: ${item.size}</span>
-                <h4 class="cart-item-title">${item.title}</h4>
-                <span class="cart-item-price">${itemPriceFormatted}</span>
-                <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
-                  <button type="button" class="size-pill" style="padding: 2px 7px; font-size: 0.65rem;" onclick="window.ZaletApp.updateCartQty(${index}, -1)">-</button>
-                  <span style="font-family: var(--font-mono); font-size: 0.75rem;">${item.quantity}</span>
-                  <button type="button" class="size-pill" style="padding: 2px 7px; font-size: 0.65rem;" onclick="window.ZaletApp.updateCartQty(${index}, 1)">+</button>
+                <span class="mono-tag" style="color: var(--accent-orange); font-size: 0.65rem;">${item.sku}</span>
+                <h4 class="cart-item-title" style="margin: 2px 0 4px; font-size: 0.9rem;">${item.title}</h4>
+                <div style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-gray-light); display: flex; flex-direction: column; gap: 3px;">
+                  <div>ODABRANA VELIČINA: <strong style="color: #fff;">${item.size}</strong></div>
+                  <div>CENA: <strong style="color: #fff;">${item.quantity > 1 ? `${singlePriceFormatted} × ${item.quantity} = ${itemPriceFormatted}` : singlePriceFormatted}</strong></div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
+                  <button type="button" class="size-pill" style="padding: 2px 8px; font-size: 0.7rem;" onclick="window.ZaletApp.updateCartQty(${index}, -1)" aria-label="Smanji količinu">-</button>
+                  <span style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;">${item.quantity}</span>
+                  <button type="button" class="size-pill" style="padding: 2px 8px; font-size: 0.7rem;" onclick="window.ZaletApp.updateCartQty(${index}, 1)" aria-label="Povećaj količinu">+</button>
                 </div>
               </div>
               <div class="cart-item-actions">
-                <button type="button" class="cart-remove-btn" onclick="window.ZaletApp.removeFromCart(${index})">UKLONI [x]</button>
+                <button type="button" class="cart-remove-btn" onclick="window.ZaletApp.removeFromCart(${index})" title="Ukloni artikal">UKLONI [✕]</button>
               </div>
             </div>
           `;
@@ -989,13 +1014,13 @@
 
       <div class="accordion-item">
         <button type="button" class="accordion-trigger">
-          <span>// 03. POST EXPRESS DOSTAVA I ZAMENA</span>
+          <span>// 03. DOSTAVA NA KUĆNU ADRESU I ZAMENA</span>
           <span class="accordion-icon">+</span>
         </button>
         <div class="accordion-content">
           <div style="font-family: var(--font-mono); font-size: 0.78rem; display: flex; flex-direction: column; gap: 8px;">
-            <p><strong>Domaće slanje (Srbija):</strong> Šaljemo istog dana ili narednog jutra putem Post Express službe. Isporuka u roku od 24-48h na vaša vrata ili najbliži paketomat.</p>
-            <p><strong>Plaćanje:</strong> Gotovinom kuriru pri preuzimanju paketa (pouzećem) ili platnom karticom na sajtu.</p>
+            <p><strong>Domaće slanje (Srbija):</strong> Šaljemo istog dana ili narednog jutra putem usluge dostave na kućnu adresu. Isporuka u roku od 24-48h direktno na vaša vrata.</p>
+            <p><strong>Plaćanje:</strong> Gotovinom kuriru pri preuzimanju paketa (pouzećem).</p>
             <p><strong>Zamena u roku od 14 dana:</strong> Jednostavna zamena veličine ukoliko je komad nenošen sa originalnim etiketama.</p>
           </div>
         </div>
@@ -1026,7 +1051,7 @@ VELIČINA: ${size}
 KOLIČINA: ${qty}
 CENA: ${priceText}
 ------------------------------------------
-PODACI ZA SLANJE (Post Express):
+PODACI ZA SLANJE (Dostava na kućnu adresu):
 Ime i Prezime: [Upišite vaše ime i prezime]
 Broj telefona: [Upišite kontakt telefon]
 Grad i Poštanski broj: [Npr. Beograd 11000]
@@ -1056,7 +1081,7 @@ Način plaćanja: Plaćanje pouzećem kuriru`;
 ${itemsText}
 ------------------------------------------
 UKUPNO ZA NAPLATU: ${priceText}
-DOSTAVA: Post Express Danas za Sutra
+DOSTAVA: Dostava na kućnu adresu (24-48h)
 ------------------------------------------
 PODACI ZA SLANJE:
 Ime i Prezime: [Upišite vaše ime i prezime]
@@ -1094,7 +1119,7 @@ Plaćanje: Pouzećem`;
     DOM.checkoutForm.style.display = 'flex';
     if (DOM.checkoutSubmitBtn) {
       DOM.checkoutSubmitBtn.disabled = false;
-      DOM.checkoutSubmitBtn.innerHTML = 'POTVRDI PORUDŽBINU // CONFIRM ORDER';
+      DOM.checkoutSubmitBtn.innerHTML = 'POTVRDI PORUDŽBINU';
     }
     if (DOM.checkoutErrorBox) {
       DOM.checkoutErrorBox.style.display = 'none';
@@ -1136,8 +1161,8 @@ Plaćanje: Pouzećem`;
       else recommended = 'XXL';
     }
 
-    DOM.calcRecommendedSize.textContent = `SIZE ${recommended}`;
-    DOM.calcAdviceText.textContent = `// Based on ${height}cm and ${weight}kg: Size ${recommended} gives you an authentic motorsport boxy drop-shoulder silhouette with heavy drape. Size up for extreme skate oversized drape.`;
+    DOM.calcRecommendedSize.textContent = `VELIČINA ${recommended}`;
+    DOM.calcAdviceText.textContent = `// Na osnovu visine ${height}cm i težine ${weight}kg: Veličina ${recommended} pruža autentičan motorsport boxy kroj sa spuštenim ramenima i prirodnim teškim padom.`;
   }
 
   // --- LIVE TELEMETRY CLOCK ---
@@ -1259,6 +1284,15 @@ Plaćanje: Pouzećem`;
       DOM.cartCloseBtn.addEventListener('click', () => {
         playSound('click');
         DOM.cartDrawerOverlay.classList.remove('open');
+        document.body.classList.remove('lock-scroll');
+      });
+    }
+
+    if (DOM.cartContinueShoppingBtn) {
+      DOM.cartContinueShoppingBtn.addEventListener('click', () => {
+        playSound('click');
+        DOM.cartDrawerOverlay.classList.remove('open');
+        document.body.classList.remove('lock-scroll');
       });
     }
 
@@ -1267,6 +1301,7 @@ Plaćanje: Pouzećem`;
         if (e.target === DOM.cartDrawerOverlay) {
           playSound('click');
           DOM.cartDrawerOverlay.classList.remove('open');
+          document.body.classList.remove('lock-scroll');
         }
       });
     }
@@ -1275,6 +1310,7 @@ Plaćanje: Pouzećem`;
     if (DOM.proceedCheckoutBtn) {
       DOM.proceedCheckoutBtn.addEventListener('click', () => {
         DOM.cartDrawerOverlay.classList.remove('open');
+        document.body.classList.remove('lock-scroll');
         openCheckoutModal();
       });
     }
@@ -1282,6 +1318,7 @@ Plaćanje: Pouzećem`;
     if (DOM.cartInstagramDmBtn) {
       DOM.cartInstagramDmBtn.addEventListener('click', () => {
         DOM.cartDrawerOverlay.classList.remove('open');
+        document.body.classList.remove('lock-scroll');
         openDmModalForCart();
       });
     }
@@ -1436,8 +1473,8 @@ Plaćanje: Pouzećem`;
         const city = (formData.get('city') || '').trim();
         const postalCode = (formData.get('postalCode') || '').trim();
         const note = (formData.get('note') || '').trim();
-        const shippingMethod = formData.get('shippingMethod') || 'Post Express (Danas za Sutra)';
-        const paymentMethod = formData.get('paymentMethod') || 'Plaćanje pouzećem (kuriru po prijemu)';
+        const shippingMethod = formData.get('shippingMethod') || 'Dostava na kućnu adresu';
+        const paymentMethod = formData.get('paymentMethod') || 'Plaćanje pouzećem (gotovinom kuriru pri preuzimanju)';
 
         if (!fullName || !phone || !address || !city) {
           showToast('MOLIMO POPUNITE SVA OBAVEZNA POLJA');
@@ -1501,7 +1538,7 @@ Plaćanje: Pouzećem`;
 
         // Loading state on submit button
         const submitBtn = DOM.checkoutSubmitBtn || DOM.checkoutForm.querySelector('button[type="submit"]');
-        const defaultBtnHtml = submitBtn ? submitBtn.innerHTML : 'POTVRDI PORUDŽBINU // CONFIRM ORDER';
+        const defaultBtnHtml = submitBtn ? submitBtn.innerHTML : 'POTVRDI PORUDŽBINU';
         if (submitBtn) {
           submitBtn.disabled = true;
           submitBtn.innerHTML = 'OBRADA PORUDŽBINE...';

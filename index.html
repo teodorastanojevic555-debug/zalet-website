@@ -96,7 +96,7 @@
       </div>
       <div class="ticker-item">
         <span class="ticker-dot"></span>
-        <span>POST EXPRESS 24-48H</span>
+        <span>DOSTAVA NA KUĆNU ADRESU 24-48H</span>
       </div>
       <div class="ticker-item">
         <span class="ticker-dot ticker-pulse"></span>
@@ -108,7 +108,7 @@
       </div>
       <div class="ticker-item">
         <span class="ticker-dot"></span>
-        <span>POST EXPRESS 24-48H</span>
+        <span>DOSTAVA NA KUĆNU ADRESU 24-48H</span>
       </div>
       <div class="ticker-item">
         <span class="ticker-dot ticker-pulse"></span>
@@ -122,7 +122,7 @@
       </div>
       <div class="ticker-item" aria-hidden="true">
         <span class="ticker-dot"></span>
-        <span>POST EXPRESS 24-48H</span>
+        <span>DOSTAVA NA KUĆNU ADRESU 24-48H</span>
       </div>
       <div class="ticker-item" aria-hidden="true">
         <span class="ticker-dot ticker-pulse"></span>
@@ -134,7 +134,7 @@
       </div>
       <div class="ticker-item" aria-hidden="true">
         <span class="ticker-dot"></span>
-        <span>POST EXPRESS 24-48H</span>
+        <span>DOSTAVA NA KUĆNU ADRESU 24-48H</span>
       </div>
       <div class="ticker-item" aria-hidden="true">
         <span class="ticker-dot ticker-pulse"></span>
@@ -244,8 +244,8 @@
           <button type="button" class="currency-btn" data-currency="EUR">EUR</button>
         </div>
       </div>
-      <div class="mono-tag" style="color: var(--accent-orange);">POST EXPRESS DOSTAVA 24-48H // BEOGRAD HQ</div>
-      <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-muted);">Plaćanje pouzećem ili platnom karticom.</p>
+      <div class="mono-tag" style="color: var(--accent-orange);">DOSTAVA NA KUĆNU ADRESU 24-48H // BEOGRAD HQ</div>
+      <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-muted);">Plaćanje pouzećem (pri preuzimanju).</p>
     </div>
   </div>
 
@@ -416,9 +416,9 @@
 
           <div class="order-step-card">
             <div class="step-number">02</div>
-            <h3 class="step-title">BRZA POST EXPRESS DOSTAVA</h3>
+            <h3 class="step-title">BRZA DOSTAVA NA KUĆNU ADRESU</h3>
             <p class="step-desc">
-              Slanje širom Srbije u roku od 24–48h na tvoju adresu ili paketomat.
+              Slanje širom Srbije u roku od 24–48h direktno na tvoju kućnu adresu.
             </p>
           </div>
 
@@ -426,7 +426,7 @@
             <div class="step-number">03</div>
             <h3 class="step-title">SIGURNO PLAĆANJE I ZAMENA</h3>
             <p class="step-desc">
-              Plaćanje pouzećem ili karticom. Obezbeđena jednostavna zamena veličine u roku od 14 dana.
+              Plaćanje pouzećem (pri preuzimanju paketa). Obezbeđena jednostavna zamena veličine u roku od 14 dana.
             </p>
           </div>
         </div>
@@ -606,7 +606,7 @@
           <div class="pdp-telemetry-strip">
             <span class="mono-tag" id="pdpSku" style="color: var(--accent-orange);">ZL-01-CR</span>
             <span class="card-badge" id="pdpEditionBadge">RUN 01 / 50</span>
-            <span class="pdp-lead-time">● 24-48h POST EXPRESS DISPATCH</span>
+            <span class="pdp-lead-time">● 24-48h DOSTAVA NA KUĆNU ADRESU</span>
           </div>
 
           <div class="pdp-price-wrap">
@@ -622,7 +622,7 @@
           <div class="pdp-size-section">
             <div class="pdp-size-header">
               <span class="pdp-size-label">SELECT CHASSIS SIZE:</span>
-              <button type="button" class="pdp-size-guide-trigger" id="pdpSizeGuideTrigger">SIZE GUIDE & MEASUREMENTS</button>
+              <button type="button" class="pdp-size-guide-trigger" id="pdpSizeGuideTrigger">VODIČ ZA VELIČINE</button>
             </div>
             <div class="pdp-size-options" id="pdpSizeOptions">
               <!-- Sizes injected via JS -->
@@ -669,16 +669,25 @@
 
       <div class="cart-drawer-header">
         <h3 class="cart-drawer-title">
-          <span>// PIT BAG</span>
+          <span>// KORPA</span>
           <span class="mono-tag" style="color: var(--accent-orange);">DROP 01</span>
         </h3>
-        <button type="button" class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">✕</button>
+        <button type="button" class="cart-close-btn" id="cartCloseBtn" aria-label="Zatvori korpu">✕</button>
+      </div>
+
+      <!-- Item Added Confirmation Banner -->
+      <div class="cart-notif-banner" id="cartNotifBanner" style="display: none;">
+        <span class="cart-notif-icon">✓</span>
+        <div class="cart-notif-info">
+          <strong class="cart-notif-title">ARTIKAL USPEŠNO DODAT U KORPU!</strong>
+          <span class="cart-notif-item" id="cartNotifItem"></span>
+        </div>
       </div>
 
       <!-- Free Shipping Progress Bar -->
       <div class="shipping-meter-wrap">
         <div class="shipping-meter-text" id="cartShippingMeterText">
-          <span>ADD FOR FREE POST EXPRESS</span>
+          <span>DODAJTE ZA BESPLATNU DOSTAVU NA KUĆNU ADRESU</span>
           <span>0%</span>
         </div>
         <div class="shipping-meter-bar">
@@ -693,17 +702,28 @@
 
       <!-- Cart Drawer Footer -->
       <div class="cart-drawer-footer">
-        <div class="cart-subtotal-row">
-          <span>SUBTOTAL:</span>
-          <span class="cart-subtotal-val" id="cartSubtotalVal">0 RSD</span>
+        <div class="cart-summary-box" style="display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono); font-size: 0.82rem; border-bottom: 1px solid var(--border-dark); padding-bottom: 12px;">
+          <div style="display: flex; justify-content: space-between; color: var(--text-gray-light);">
+            <span>UKUPNA KOLIČINA:</span>
+            <span id="cartTotalCountVal" style="font-weight: 700; color: #fff;">0 kom.</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 700; color: #fff;">UKUPAN ZBIR:</span>
+            <span class="cart-subtotal-val" id="cartSubtotalVal" style="color: var(--accent-orange); font-size: 1.15rem; font-weight: 800;">0 RSD</span>
+          </div>
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-gray-muted);">
-          * Post Express shipping calculated at checkout (Free over 8,000 RSD / €70).
+          * Dostava na kućnu adresu se obračunava pri poručivanju (Besplatno preko 8.000 RSD / €70).
         </div>
 
-        <button type="button" class="btn-primary" id="proceedCheckoutBtn" style="width: 100%;">
-          NASTAVI NA PORUČIVANJE [ → ]
-        </button>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <button type="button" class="btn-primary" id="proceedCheckoutBtn" style="width: 100%; text-align: center; justify-content: center;">
+            ZAVRŠI PORUDŽBINU
+          </button>
+          <button type="button" class="btn-secondary" id="cartContinueShoppingBtn" style="width: 100%; text-align: center; justify-content: center; font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.05em; padding: 12px;">
+            NASTAVI KUPOVINU
+          </button>
+        </div>
 
         <button type="button" class="btn-dm" id="cartInstagramDmBtn" style="width: 100%;">
           <span>PORUČIVANJE PREKO INSTAGRAMA</span>
@@ -721,8 +741,8 @@
       <button type="button" class="pdp-close-btn" id="checkoutCloseBtn" aria-label="Close checkout">✕</button>
 
       <div class="section-header" style="margin-bottom: 20px;">
-        <span class="section-pretitle">POST EXPRESS FAST DISPATCH</span>
-        <h3 class="section-title" style="font-size: 1.6rem;">COMPLETE DISPATCH ORDER</h3>
+        <span class="section-pretitle">BRZA DOSTAVA NA KUĆNU ADRESU</span>
+        <h3 class="section-title" style="font-size: 1.6rem;">ZAVRŠETAK PORUDŽBINE</h3>
       </div>
 
       <!-- Form -->
@@ -763,16 +783,15 @@
           <div class="form-group">
             <label class="form-label" for="shippingMethod">NAČIN ISPORUKE</label>
             <select id="shippingMethod" name="shippingMethod" class="form-select">
-              <option value="Post Express (Danas za Sutra)">Post Express Srbija (24-48h Danas za Sutra)</option>
-              <option value="Post Express Paketomat">Post Express Paketomat (Preuzimanje 24/7)</option>
+              <option value="Dostava na kućnu adresu">Dostava na kućnu adresu (24-48h)</option>
+              <option value="Paketomat">Paketomat (Preuzimanje 24/7)</option>
               <option value="Lično Preuzimanje Beograd">Lično preuzimanje (Beograd Centar po dogovoru)</option>
             </select>
           </div>
           <div class="form-group">
             <label class="form-label" for="paymentMethod">NAČIN PLAĆANJA</label>
             <select id="paymentMethod" name="paymentMethod" class="form-select">
-              <option value="Plaćanje pouzećem (kuriru po prijemu)">Plaćanje pouzećem (gotovinom kuriru)</option>
-              <option value="Platna Kartica (Visa / Master / Dina)">Platna kartica (Visa / MasterCard / Dina)</option>
+              <option value="Plaćanje pouzećem (gotovinom kuriru)">Plaćanje pouzećem (gotovinom kuriru pri preuzimanju)</option>
               <option value="Direktna uplata na račun">Direktna uplata na račun (e-banking)</option>
             </select>
           </div>
@@ -785,7 +804,7 @@
             <span id="checkoutSubtotal">0 RSD</span>
           </div>
           <div style="display: flex; justify-content: space-between;">
-            <span>DOSTAVA (POST EXPRESS):</span>
+            <span>DOSTAVA NA KUĆNU ADRESU:</span>
             <span id="checkoutShipping">350 RSD</span>
           </div>
           <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--accent-orange); border-top: 1px solid var(--border-dark); padding-top: 8px; font-size: 0.95rem;">
@@ -795,7 +814,7 @@
         </div>
 
         <button type="submit" id="checkoutSubmitBtn" class="btn-primary" style="width: 100%;">
-          POTVRDI PORUDŽBINU // CONFIRM ORDER
+          POTVRDI PORUDŽBINU
         </button>
 
         <!-- Checkout Error Message Container -->
@@ -808,7 +827,7 @@
           </p>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
             <button type="button" id="checkoutRetryBtn" class="btn-primary" style="padding: 10px 14px; font-size: 0.72rem;">
-              POKUŠAJ PONOVO // RETRY
+              POKUŠAJ PONOVO
             </button>
             <button type="button" id="checkoutCopyErrorOrderBtn" class="btn-secondary" style="padding: 10px 14px; font-size: 0.72rem;">
               KOPIRAJ PORUDŽBINU
@@ -829,7 +848,7 @@
         <div style="font-size: 3rem; color: var(--accent-green-telemetry);">✓</div>
         <h3 style="font-family: var(--font-display); font-size: 1.5rem;">PORUDŽBINA JE USPEŠNO ZABELEŽENA!</h3>
         <p style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-gray-light); max-width: 480px;">
-          Vaš nalog za Drop 01 je prosleđen u naš logistički centar u Beogradu. Pošiljka se pakuje u prepoznatljivo ZALET pakovanje i šalje putem Post Express kurirske službe.
+          Vaš nalog za Drop 01 je prosleđen u naš logistički centar u Beogradu. Pošiljka se pakuje u prepoznatljivo ZALET pakovanje i šalje se putem usluge Dostava na kućnu adresu.
         </p>
 
         <div id="orderSummaryWrap" style="width: 100%;"></div>
@@ -871,23 +890,23 @@
   </div>
 
   <!-- ==========================================================================
-       INTERACTIVE SIZE GUIDE & RECOMMENDER MODAL
+       VODIČ ZA VELIČINE I KALKULATOR
        ========================================================================== -->
-  <div class="size-guide-modal-overlay" id="sizeGuideModalOverlay" role="dialog" aria-modal="true" aria-label="Size Guide">
+  <div class="size-guide-modal-overlay" id="sizeGuideModalOverlay" role="dialog" aria-modal="true" aria-label="Vodič za veličine">
     <div class="size-guide-modal">
-      <button type="button" class="pdp-close-btn" id="sizeGuideCloseBtn" aria-label="Close size guide">✕</button>
+      <button type="button" class="pdp-close-btn" id="sizeGuideCloseBtn" aria-label="Zatvori vodič za veličine">✕</button>
 
-      <span class="section-pretitle">TECHNICAL FIT SPECIFICATIONS</span>
-      <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 20px;">MOTORSPORT STREETWEAR SIZE GUIDE</h3>
+      <span class="section-pretitle">TEHNIČKE SPECIFIKACIJE KROJA</span>
+      <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 20px;">VODIČ ZA VELIČINE</h3>
 
       <!-- Interactive Calculator -->
       <div class="size-calculator-box">
-        <h4 class="calc-title">// INTERACTIVE FIT ADVISOR</h4>
+        <h4 class="calc-title">// KALKULATOR PREPORUČENE VELIČINE</h4>
 
         <div class="calc-inputs-grid">
           <div class="calc-slider-wrap">
             <div class="calc-slider-header">
-              <span>YOUR HEIGHT:</span>
+              <span>VAŠA VISINA:</span>
               <strong id="heightValDisplay" style="color: var(--accent-orange);">182 cm</strong>
             </div>
             <input type="range" class="calc-slider" id="sizeHeightSlider" min="155" max="205" value="182">
@@ -895,7 +914,7 @@
 
           <div class="calc-slider-wrap">
             <div class="calc-slider-header">
-              <span>YOUR WEIGHT:</span>
+              <span>VAŠA TEŽINA:</span>
               <strong id="weightValDisplay" style="color: var(--accent-orange);">78 kg</strong>
             </div>
             <input type="range" class="calc-slider" id="sizeWeightSlider" min="50" max="120" value="78">
@@ -903,64 +922,75 @@
         </div>
 
         <div class="calc-result-badge">
-          <span>RECOMMENDED ZALET CHASSIS SIZE:</span>
-          <span class="calc-recommended-size" id="calcRecommendedSize">SIZE L</span>
+          <span>PREPORUČENA ZALET VELIČINA:</span>
+          <span class="calc-recommended-size" id="calcRecommendedSize">VELIČINA L</span>
         </div>
         <p id="calcAdviceText" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-light); margin-top: 8px;">
-          // Based on 182cm / 78kg: Size L delivers our intended relaxed motorsport boxy cut.
+          // Na osnovu visine 182cm i težine 78kg: Veličina L pruža opušten motorsport boxy kroj sa spuštenim ramenima.
         </p>
       </div>
 
       <!-- Heavyweight Tees Spec Table -->
-      <h4 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: 8px;">1. MAJICE (VISOKOKVALITETAN PAMUK)</h4>
+      <h4 style="font-family: var(--font-display); font-size: 0.95rem; margin-bottom: 8px;">1. MAJICE (PREMIJUM TEŠKI PAMUK // BOXY KROJ)</h4>
       <div class="table-scroll-hint"><span>[ ⇄ ]</span> PREVUCI TABELU ZA SVE MERE (CM)</div>
       <div class="table-responsive">
         <table class="spec-table">
           <thead>
             <tr>
               <th>VELIČINA</th>
-              <th>ŠIRINA GRUDI (CM)</th>
-              <th>DUŽINA (CM)</th>
-              <th>SPUŠTENA RAMENA (CM)</th>
-              <th>RUKAV (CM)</th>
+              <th>ŠIRINA GRUDI</th>
+              <th>DUŽINA</th>
+              <th>RAMENA</th>
+              <th>RUKAV</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>S</td><td>56</td><td>71</td><td>54</td><td>22</td></tr>
-            <tr><td>M</td><td>59</td><td>74</td><td>56</td><td>23</td></tr>
-            <tr><td>L</td><td>62</td><td>76</td><td>58</td><td>24</td></tr>
-            <tr><td>XL</td><td>65</td><td>78</td><td>60</td><td>25</td></tr>
-            <tr><td>XXL</td><td>68</td><td>80</td><td>62</td><td>26</td></tr>
+            <tr><td>S</td><td>56 cm</td><td>71 cm</td><td>54 cm</td><td>22 cm</td></tr>
+            <tr><td>M</td><td>59 cm</td><td>74 cm</td><td>56 cm</td><td>23 cm</td></tr>
+            <tr><td>L</td><td>62 cm</td><td>76 cm</td><td>58 cm</td><td>24 cm</td></tr>
+            <tr><td>XL</td><td>65 cm</td><td>78 cm</td><td>60 cm</td><td>25 cm</td></tr>
+            <tr><td>XXL</td><td>68 cm</td><td>80 cm</td><td>62 cm</td><td>26 cm</td></tr>
           </tbody>
         </table>
       </div>
 
       <!-- Heavyweight Hoodies Spec Table -->
-      <h4 style="font-family: var(--font-display); font-size: 0.95rem; margin: 24px 0 8px;">2. PREMIJUM DUKSEVI</h4>
+      <h4 style="font-family: var(--font-display); font-size: 0.95rem; margin: 24px 0 8px;">2. DUKSEVI (PREMIJUM DUKSEVI SA KAPULJAČOM)</h4>
       <div class="table-scroll-hint"><span>[ ⇄ ]</span> PREVUCI TABELU ZA SVE MERE (CM)</div>
       <div class="table-responsive">
         <table class="spec-table">
           <thead>
             <tr>
               <th>VELIČINA</th>
-              <th>ŠIRINA GRUDI (CM)</th>
-              <th>DUŽINA (CM)</th>
-              <th>SPUŠTENA RAMENA (CM)</th>
-              <th>DUŽINA RUKAVA (CM)</th>
+              <th>ŠIRINA GRUDI</th>
+              <th>DUŽINA</th>
+              <th>RAMENA</th>
+              <th>RUKAV</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>S</td><td>60</td><td>68</td><td>58</td><td>62</td></tr>
-            <tr><td>M</td><td>63</td><td>71</td><td>61</td><td>64</td></tr>
-            <tr><td>L</td><td>66</td><td>74</td><td>64</td><td>66</td></tr>
-            <tr><td>XL</td><td>69</td><td>77</td><td>67</td><td>68</td></tr>
-            <tr><td>XXL</td><td>72</td><td>80</td><td>70</td><td>70</td></tr>
+            <tr><td>S</td><td>60 cm</td><td>68 cm</td><td>58 cm</td><td>62 cm</td></tr>
+            <tr><td>M</td><td>63 cm</td><td>71 cm</td><td>61 cm</td><td>64 cm</td></tr>
+            <tr><td>L</td><td>66 cm</td><td>74 cm</td><td>64 cm</td><td>66 cm</td></tr>
+            <tr><td>XL</td><td>69 cm</td><td>77 cm</td><td>67 cm</td><td>68 cm</td></tr>
+            <tr><td>XXL</td><td>72 cm</td><td>80 cm</td><td>70 cm</td><td>70 cm</td></tr>
           </tbody>
         </table>
       </div>
 
-      <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-muted); margin-top: 16px;">
-        * Note on Fit: All garments are tailored in a boxy oversized motorsport silhouette with dropped shoulders. If you prefer a closer regular cut, order one size down.
+      <!-- Measuring Guide & Advice -->
+      <div class="size-measure-guide" style="margin-top: 20px; padding: 16px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-dark); font-family: var(--font-mono); font-size: 0.74rem;">
+        <h5 style="font-family: var(--font-display); font-size: 0.82rem; color: var(--accent-orange); margin-bottom: 8px;">// KAKO SE PRAVILNO IZMERITI</h5>
+        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; color: var(--text-gray-light);">
+          <li>• <strong>Širina grudi:</strong> Položite svoju omiljenu majicu ili duks na ravnu površinu i izmerite širinu od jednog do drugog pazuha.</li>
+          <li>• <strong>Dužina:</strong> Izmerite dužinu na leđima od najviše tačke na ramenu (pored kragne) do samog donjeg ruba.</li>
+          <li>• <strong>Ramena:</strong> Izmerite rastojanje između šavova ramena preko leđa. Naši modeli poseduju spuštena ramena (drop shoulder) za opušten pad.</li>
+          <li>• <strong>Rukav:</strong> Izmerite dužinu od ramenog šava do kraja manžetne ili ruba rukava.</li>
+        </ul>
+      </div>
+
+      <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-gray-muted); margin-top: 14px;">
+        * Uputstvo o kroju: Svi komadi su skrojeni u specifičnoj boxy oversized motorsport silueti sa spuštenim ramenima. Ako preferirate uži ili klasičan regular kroj uz telo, preporučujemo da naručite jednu veličinu manju. Sve dimenzije su izražene u centimetrima (dozvoljeno odstupanje ±1cm).
       </div>
     </div>
   </div>
