@@ -309,6 +309,7 @@ const PRODUCTS_DATA = [
     description: 'Scuderia Ferrari Formula 1 Team Fig. 6 tehnički dijagram. Ilustracija F1 bolida u trkačkoj crvenoj boji, okružena aerodinamičkim nacrtima odozgo i sa strane sa arhivskim podacima tima.',
     images: [
       'assets/images/tees/tee-08-front.jpg',
+      'assets/images/tees/tee-08-both.jpg',
       'assets/images/tees/tee-08-back.jpg'
     ],
     hoverImage: 'assets/images/tees/tee-08-back.jpg',
@@ -501,6 +502,7 @@ const PRODUCTS_DATA = [
     description: 'Bery Racing Porsche 911 GT3 RS u upečatljivoj roze trkačkoj ediciji sa natpisom BERY RACING i tehničkim tekstom o pomeranju granica brzine na trkačkoj stazi.',
     images: [
       'assets/images/tees/tee-12-front.jpg',
+      'assets/images/tees/tee-12-model.jpg',
       'assets/images/tees/tee-12-back.jpg'
     ],
     hoverImage: 'assets/images/tees/tee-12-back.jpg',
