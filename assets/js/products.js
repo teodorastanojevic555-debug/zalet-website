@@ -117,10 +117,10 @@ const PRODUCTS_DATA = [
     leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Duboka trkačka crna podloga sa suptilnim ZALET chest brendingom. Leđni panel dominira vertikalnim PORSCHE ispisom presečenim bočnim profilom 992 GT3 RS sa karbonskim krilom.',
     images: [
-      'assets/images/tees/tee-03-back.jpg',
-      'assets/images/tees/tee-03-front.jpg'
+      'assets/images/tees/tee-03-back.jpg?v=2',
+      'assets/images/tees/tee-03-front.jpg?v=2'
     ],
-    hoverImage: 'assets/images/tees/tee-03-front.jpg',
+    hoverImage: 'assets/images/tees/tee-03-front.jpg?v=2',
     specs: {
       composition: '100% Heavyweight Češljani Pamuk',
       weight: 'PREMIUM PAMUK',
@@ -213,10 +213,10 @@ const PRODUCTS_DATA = [
     leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Crveni Zalet Team 95 McQueen natpis na grudima, sa kultnim Lightning McQueenom na leđima i natpisom "YOU MAKE MY HEART GO KACHOW!" sa performansnim specifikacijama (0-60 za 4 sekunde, 750 HP).',
     images: [
-      'assets/images/tees/tee-05-back.jpg',
-      'assets/images/tees/tee-05-front.jpg'
+      'assets/images/tees/tee-05-back.jpg?v=2',
+      'assets/images/tees/tee-05-front.jpg?v=2'
     ],
-    hoverImage: 'assets/images/tees/tee-05-front.jpg',
+    hoverImage: 'assets/images/tees/tee-05-front.jpg?v=2',
     specs: {
       composition: '100% Češljani Pamuk',
       weight: 'PREMIUM PAMUK',
@@ -357,10 +357,10 @@ const PRODUCTS_DATA = [
     leadTime: '24-48h Dostava na kućnu adresu',
     description: 'FIA Formula 1 Technical Regulations Blueprint. Minimalistički ZALET wordmark na grudima, dok zadnji panel prikazuje kompletan tehnički šematski nacrt F1 aero-šasije sa telemetrijskim kotama i podacima.',
     images: [
-      'assets/images/tees/tee-02-back.jpg',
-      'assets/images/tees/tee-02-front.jpg'
+      'assets/images/tees/tee-02-back.jpg?v=2',
+      'assets/images/tees/tee-02-front.jpg?v=2'
     ],
-    hoverImage: 'assets/images/tees/tee-02-front.jpg',
+    hoverImage: 'assets/images/tees/tee-02-front.jpg?v=2',
     specs: {
       composition: '100% Češljani Compact Pamuk',
       weight: 'Visokokvalitetan pamuk',
@@ -550,10 +550,10 @@ const PRODUCTS_DATA = [
     leadTime: '24-48h Dostava na kućnu adresu',
     description: 'Najtraženiji model kolekcije! Plavi ZALET CARRERA R02 logo na prednjem delu, dok leđa krasi Sally Carrera i upečatljiv slogan "YOU HAVE MY HEART RACING!" sa fabričkim specifikacijama i podacima o motoru.',
     images: [
-      'assets/images/tees/tee-04-back.jpg',
-      'assets/images/tees/tee-04-front.jpg'
+      'assets/images/tees/tee-04-back.jpg?v=2',
+      'assets/images/tees/tee-04-front.jpg?v=2'
     ],
-    hoverImage: 'assets/images/tees/tee-04-front.jpg',
+    hoverImage: 'assets/images/tees/tee-04-front.jpg?v=2',
     specs: {
       composition: '100% Češljani Pamuk',
       weight: 'Visokokvalitetan pamuk',
