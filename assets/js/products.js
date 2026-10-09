@@ -916,24 +916,24 @@ const PRODUCTS_DATA = [
     fitAdvice: 'Standardna veličina za opušteni oversized kroj.'
   },
 
-  // --- ZALET HOODIE COLLECTION // DROP 01 ---
+  // --- ZALET KOLEKCIJA DUKSEVA // DROP 01 ---
   {
     id: 'hoodie-01',
     sku: 'ZL-HD-01',
-    title: 'ZALET HOODIE // 01 — BORN TO BE DIFFERENT',
+    title: 'ZALET DUKS // 01 — BORN TO BE DIFFERENT',
     category: 'hoodies',
     subcategory: 'streetwear',
-    categoryLabel: 'OVERSIZED HOODIE',
+    categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
     color: 'Pitch Black',
     colorHex: '#121212',
-    badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 15,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Autentični Zalet oversized hoodie u mat crnoj boji. Minimalistički, upečatljiv vertikalni "BORN TO BE Different" print duž leđa. Izrađen od vrhunskog teškog češljanog pamuka sa mekanom brušenom unutrašnjošću, masivnim elastičnim ranflama i prostranim prednjim džepom.',
+    description: 'Autentični Zalet oversized duks u mat crnoj boji. Minimalistički, upečatljiv vertikalni "BORN TO BE Different" print duž leđa. Izrađen od vrhunskog teškog češljanog pamuka sa mekanom brušenom unutrašnjošću, masivnim elastičnim ranflama i prostranim prednjim džepom.',
     images: [
       'assets/images/hoodies/hoodie-01-front.jpg',
       'assets/images/hoodies/hoodie-01-back.jpg'
@@ -967,16 +967,16 @@ const PRODUCTS_DATA = [
   {
     id: 'hoodie-02',
     sku: 'ZL-HD-02',
-    title: 'ZALET HOODIE // 02 — BE REAL CUBE',
+    title: 'ZALET DUKS // 02 — BE REAL CUBE',
     category: 'hoodies',
     subcategory: 'streetwear',
-    categoryLabel: 'OVERSIZED HOODIE',
+    categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
     color: 'Pitch Black',
     colorHex: '#121212',
-    badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 14,
     leadTime: '24-48h Dostava na kućnu adresu',
@@ -1014,16 +1014,16 @@ const PRODUCTS_DATA = [
   {
     id: 'hoodie-03',
     sku: 'ZL-HD-03',
-    title: 'ZALET HOODIE // 03 — OUTSIDE THE BOX',
+    title: 'ZALET DUKS // 03 — OUTSIDE THE BOX',
     category: 'hoodies',
     subcategory: 'streetwear',
-    categoryLabel: 'OVERSIZED HOODIE',
+    categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
     color: 'Crisp Off-White',
     colorHex: '#F5F5F5',
-    badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 12,
     leadTime: '24-48h Dostava na kućnu adresu',
@@ -1061,16 +1061,16 @@ const PRODUCTS_DATA = [
   {
     id: 'hoodie-04',
     sku: 'ZL-HD-04',
-    title: 'ZALET HOODIE // 04 — POSITIVE WAY UP',
+    title: 'ZALET DUKS // 04 — POSITIVE WAY UP',
     category: 'hoodies',
     subcategory: 'streetwear',
-    categoryLabel: 'OVERSIZED HOODIE',
+    categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
     color: 'Pitch Black',
     colorHex: '#121212',
-    badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 16,
     leadTime: '24-48h Dostava na kućnu adresu',
@@ -1108,16 +1108,16 @@ const PRODUCTS_DATA = [
   {
     id: 'hoodie-05',
     sku: 'ZL-HD-05',
-    title: 'ZALET HOODIE // 05 — THE BLUE FLOWER',
+    title: 'ZALET DUKS // 05 — THE BLUE FLOWER',
     category: 'hoodies',
     subcategory: 'streetwear',
-    categoryLabel: 'OVERSIZED HOODIE',
+    categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
     color: 'Crisp Off-White',
     colorHex: '#F5F5F5',
-    badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 15,
     leadTime: '24-48h Dostava na kućnu adresu',
@@ -1155,20 +1155,20 @@ const PRODUCTS_DATA = [
   {
     id: 'hoodie-06',
     sku: 'ZL-HD-06',
-    title: 'ZALET HOODIE // 06 — UNLIMITED TARMAC',
+    title: 'ZALET DUKS // 06 — UNLIMITED TARMAC',
     category: 'hoodies',
     subcategory: 'streetwear',
-    categoryLabel: 'OVERSIZED HOODIE',
+    categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
     color: 'Crisp Off-White',
     colorHex: '#F5F5F5',
-    badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 14,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Klasični beli "UNLIMITED / MAKE EVERYTHING POSSIBLE" hoodie sa crveno-crnim logotipom na grudima. Skaterska i tarmac estetika stvorena za svakodnevno nošenje u pokretu.',
+    description: 'Klasični beli "UNLIMITED / MAKE EVERYTHING POSSIBLE" duks sa crveno-crnim logotipom na grudima. Skaterska i tarmac estetika stvorena za svakodnevno nošenje u pokretu.',
     images: [
       'assets/images/hoodies/hoodie-06-front.jpg',
       'assets/images/hoodies/hoodie-06-back.jpg'
@@ -1202,16 +1202,16 @@ const PRODUCTS_DATA = [
   {
     id: 'hoodie-07',
     sku: 'ZL-HD-07',
-    title: 'ZALET HOODIE // 07 — DALMATIAN VIBES',
+    title: 'ZALET DUKS // 07 — DALMATIAN VIBES',
     category: 'hoodies',
     subcategory: 'streetwear',
-    categoryLabel: 'OVERSIZED HOODIE',
+    categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
     color: 'Crisp Off-White',
     colorHex: '#F5F5F5',
-    badges: ['DROP 01 // HOODIE', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 18,
     leadTime: '24-48h Dostava na kućnu adresu',
@@ -1245,6 +1245,242 @@ const PRODUCTS_DATA = [
       ]
     },
     fitAdvice: 'Prostran oversized kroj koji savršeno stoji.'
+  },
+  {
+    id: 'hoodie-08',
+    sku: 'ZL-HD-08',
+    title: 'ZALET DUKS // 08 — NEED MONEY FOR PORSCHE',
+    category: 'hoodies',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED DUKS',
+    priceRSD: 4490,
+    priceEUR: 38,
+    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 14,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'Najpopularniji Zalet motorsport slogan u premijum duks izdanju. "NEED MONEY FOR PORSCHE" leđna tipografija u crnoj boji sa detaljnom ilustracijom roze Porsche 992 GT3 RS sa karbonskim aero-krilom. Teški brušeni pamuk, topla unutrašnjost i prostrana kapuljača.',
+    images: [
+      'assets/images/hoodies/hoodie-08-back.jpg?v=2',
+      'assets/images/hoodies/hoodie-08-front.jpg?v=2'
+    ],
+    hoverImage: 'assets/images/hoodies/hoodie-08-back.jpg?v=2',
+    specs: {
+      composition: '100% Češljani Teški Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Topla brušena unutrašnjost, masivna kapuljača',
+      print: 'Visokodefinisana sito-štampa Porsche GT3 RS',
+      origin: 'Beograd, Srbija'
+    },
+    telemetry: {
+      chassis: 'HEAVYWEIGHT BOXY FIT',
+      density: '100% TEŠKI PAMUK',
+      edition: 'RUN 01 / 40'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
+      rows: [
+        ['S', '60 cm', '70 cm', '62 cm'],
+        ['M', '63 cm', '72 cm', '64 cm'],
+        ['L', '66 cm', '74 cm', '66 cm'],
+        ['XL', '69 cm', '76 cm', '67 cm'],
+        ['XXL', '72 cm', '78 cm', '68 cm']
+      ]
+    },
+    fitAdvice: 'Oversized boxy kroj koji savršeno zadržava formu.'
+  },
+  {
+    id: 'hoodie-09',
+    sku: 'ZL-HD-09',
+    title: 'ZALET DUKS // 09 — AYRTON SENNA MP4/4',
+    category: 'hoodies',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED DUKS',
+    priceRSD: 4490,
+    priceEUR: 38,
+    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 15,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'Posveta trostrukom F1 svetskom šampionu: Ayrton Senna i pobednički bolid McLaren MP4/4 u legendarnim Marlboro trkačkim bojama. Skaterska i ulična estetika na premijum teškom belom pamuku.',
+    images: [
+      'assets/images/hoodies/hoodie-09-front.jpg?v=2',
+      'assets/images/hoodies/hoodie-09-back.jpg?v=2'
+    ],
+    hoverImage: 'assets/images/hoodies/hoodie-09-front.jpg?v=2',
+    specs: {
+      composition: '100% Češljani Teški Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Otporno na habanje i pranje, brušeni unutrašnji sloj',
+      print: 'Visokorezolucijska Senna F1 grafika',
+      origin: 'Beograd, Srbija'
+    },
+    telemetry: {
+      chassis: 'HEAVYWEIGHT BOXY FIT',
+      density: '100% TEŠKI PAMUK',
+      edition: 'RUN 01 / 45'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
+      rows: [
+        ['S', '60 cm', '70 cm', '62 cm'],
+        ['M', '63 cm', '72 cm', '64 cm'],
+        ['L', '66 cm', '74 cm', '66 cm'],
+        ['XL', '69 cm', '76 cm', '67 cm'],
+        ['XXL', '72 cm', '78 cm', '68 cm']
+      ]
+    },
+    fitAdvice: 'Prostran ulični kroj sa spuštenim ramenima.'
+  },
+  {
+    id: 'hoodie-10',
+    sku: 'ZL-HD-10',
+    title: 'ZALET DUKS // 10 — MAX VERSTAPPEN #01',
+    category: 'hoodies',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED DUKS',
+    priceRSD: 4490,
+    priceEUR: 38,
+    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 16,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'Max Verstappen #01 šampionska edicija. Na prednjoj strani diskretan crveni Formula 1 logo na grudima, dok zadnji panel nosi moćan "VERSTAPPEN #01" motiv sa trkačkim bolidom, kacigom i potpisom šampiona.',
+    images: [
+      'assets/images/hoodies/hoodie-10-back.jpg?v=2',
+      'assets/images/hoodies/hoodie-10-front.jpg?v=2',
+      'assets/images/hoodies/hoodie-10-both.jpg?v=2'
+    ],
+    hoverImage: 'assets/images/hoodies/hoodie-10-front.jpg?v=2',
+    specs: {
+      composition: '100% Češljani Teški Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Dvostruka kapuljača, ojačani šavovi i ranfle',
+      print: 'Prednji crveni F1 logo + leđni Max Verstappen art',
+      origin: 'Beograd, Srbija'
+    },
+    telemetry: {
+      chassis: 'HEAVYWEIGHT BOXY FIT',
+      density: '100% TEŠKI PAMUK',
+      edition: 'RUN 01 / 50'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
+      rows: [
+        ['S', '60 cm', '70 cm', '62 cm'],
+        ['M', '63 cm', '72 cm', '64 cm'],
+        ['L', '66 cm', '74 cm', '66 cm'],
+        ['XL', '69 cm', '76 cm', '67 cm'],
+        ['XXL', '72 cm', '78 cm', '68 cm']
+      ]
+    },
+    fitAdvice: 'Boxy silueta, biraj svoju regularnu veličinu.'
+  },
+  {
+    id: 'hoodie-11',
+    sku: 'ZL-HD-11',
+    title: 'ZALET DUKS // 11 — SUNDAY RACING CLUB',
+    category: 'hoodies',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED DUKS',
+    priceRSD: 4490,
+    priceEUR: 38,
+    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 13,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'Prepoznatljiva trkačka elegancija: "Sunday Racing Club EST. 1950" sa ukrštenim kariranim zastavicama na grudima. Raglan kroj, mekana unutrašnjost i duboka kapuljača za hladnije trkačke večeri.',
+    images: [
+      'assets/images/hoodies/hoodie-11-front.jpg?v=2',
+      'assets/images/hoodies/hoodie-11-back.jpg?v=2'
+    ],
+    hoverImage: 'assets/images/hoodies/hoodie-11-front.jpg?v=2',
+    specs: {
+      composition: '100% Češljani Teški Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Meki baršunasti finiš i pre-shrunk tretman',
+      print: 'Crna vintage sito-štampa visoke preciznosti',
+      origin: 'Beograd, Srbija'
+    },
+    telemetry: {
+      chassis: 'HEAVYWEIGHT BOXY FIT',
+      density: '100% TEŠKI PAMUK',
+      edition: 'RUN 01 / 35'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
+      rows: [
+        ['S', '60 cm', '70 cm', '62 cm'],
+        ['M', '63 cm', '72 cm', '64 cm'],
+        ['L', '66 cm', '74 cm', '66 cm'],
+        ['XL', '69 cm', '76 cm', '67 cm'],
+        ['XXL', '72 cm', '78 cm', '68 cm']
+      ]
+    },
+    fitAdvice: 'Opušteni kroj koji savršeno prati liniju tela.'
+  },
+  {
+    id: 'hoodie-12',
+    sku: 'ZL-HD-12',
+    title: 'ZALET DUKS // 12 — HOT GIRLS WATCH FORMULA 1',
+    category: 'hoodies',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED DUKS',
+    priceRSD: 4490,
+    priceEUR: 38,
+    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 18,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'Najtraženiji leđni statement komad: "hot girls watch FORMULA 1" u upečatljivoj retro trkačkoj crvenoj tipografiji sa stilizovanim F1 bolidom. Teški pamuk sa brušenom postavom.',
+    images: [
+      'assets/images/hoodies/hoodie-12-back.jpg?v=2',
+      'assets/images/hoodies/hoodie-12-front.jpg?v=2'
+    ],
+    hoverImage: 'assets/images/hoodies/hoodie-12-back.jpg?v=2',
+    specs: {
+      composition: '100% Češljani Teški Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Otporno na rastezanje i pranje, dupla kapuljača',
+      print: 'Crvena ekološka sito-štampa visoke postojanosti',
+      origin: 'Beograd, Srbija'
+    },
+    telemetry: {
+      chassis: 'HEAVYWEIGHT BOXY FIT',
+      density: '100% TEŠKI PAMUK',
+      edition: 'RUN 01 / 50'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
+      rows: [
+        ['S', '60 cm', '70 cm', '62 cm'],
+        ['M', '63 cm', '72 cm', '64 cm'],
+        ['L', '66 cm', '74 cm', '66 cm'],
+        ['XL', '69 cm', '76 cm', '67 cm'],
+        ['XXL', '72 cm', '78 cm', '68 cm']
+      ]
+    },
+    fitAdvice: 'Oversized motorsport silueta sa spuštenim ramenima.'
   }
 ];
 

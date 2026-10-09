@@ -1927,7 +1927,7 @@ ${note ? `Napomena: ${note}\n` : ''}`;
 
       // Update badge
       if (badgeText) {
-        const badgeLabel = slides[newIndex].getAttribute('data-badge') || (newIndex === 0 ? 'DROP 01 // 3D MAJICA' : 'DROP 01 // 3D HOODIE');
+        const badgeLabel = slides[newIndex].getAttribute('data-badge') || (newIndex === 0 ? 'DROP 01 // 3D MAJICA' : 'DROP 01 // 3D DUKS');
         badgeText.textContent = badgeLabel;
       }
 
