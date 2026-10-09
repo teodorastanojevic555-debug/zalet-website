@@ -1481,6 +1481,53 @@ const PRODUCTS_DATA = [
       ]
     },
     fitAdvice: 'Oversized motorsport silueta sa spuštenim ramenima.'
+  },
+  {
+    id: 'hoodie-13',
+    sku: 'ZL-HD-13',
+    title: 'ZALET DUKS // 13 — FORMULA 1 RED BULL RACING CLUB',
+    category: 'hoodies',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED DUKS',
+    priceRSD: 4490,
+    priceEUR: 38,
+    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 16,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'Oracle Red Bull Racing motiv sa šampionskim bolidom Maxa Verstappena. Upečatljiv leđni "FORMULA 1 RACING CLUB" dizajn sa arhivskim podacima, telemetrijom i logotipima. Teški brušeni pamuk sa dubokom kapuljačom.',
+    images: [
+      'assets/images/hoodies/hoodie-13-back.jpg?v=2',
+      'assets/images/hoodies/hoodie-13-front.jpg?v=2'
+    ],
+    hoverImage: 'assets/images/hoodies/hoodie-13-back.jpg?v=2',
+    specs: {
+      composition: '100% Češljani Teški Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Otporno na habanje i pranje, brušena unutrašnjost',
+      print: 'Visokorezolucijska Red Bull F1 grafika',
+      origin: 'Beograd, Srbija'
+    },
+    telemetry: {
+      chassis: 'HEAVYWEIGHT BOXY FIT',
+      density: '100% TEŠKI PAMUK',
+      edition: 'RUN 01 / 50'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
+      rows: [
+        ['S', '60 cm', '70 cm', '62 cm'],
+        ['M', '63 cm', '72 cm', '64 cm'],
+        ['L', '66 cm', '74 cm', '66 cm'],
+        ['XL', '69 cm', '76 cm', '67 cm'],
+        ['XXL', '72 cm', '78 cm', '68 cm']
+      ]
+    },
+    fitAdvice: 'Oversized boxy silueta sa spuštenim ramenima.'
   }
 ];
 
