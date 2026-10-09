@@ -1,4 +1,4 @@
-// ZALET MOTORSPORT STREETWEAR // DROP 01 CATALOG DATA
+﻿// ZALET MOTORSPORT STREETWEAR // DROP 01 CATALOG DATA
 // 20 Authentic Limited Edition Streetwear & Motorsport T-Shirts
 
 const PRODUCTS_DATA = [
@@ -920,103 +920,9 @@ const PRODUCTS_DATA = [
   {
     id: 'hoodie-01',
     sku: 'ZL-HD-01',
-    title: 'ZALET DUKS // 01 — BORN TO BE DIFFERENT',
+    title: 'ZALET DUKS // 01 — AYRTON SENNA MP4/4',
     category: 'hoodies',
-    subcategory: 'streetwear',
-    categoryLabel: 'OVERSIZED DUKS',
-    priceRSD: 4490,
-    priceEUR: 38,
-    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
-    color: 'Pitch Black',
-    colorHex: '#121212',
-    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
-    status: 'IN STOCK',
-    stockCount: 15,
-    leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Autentični Zalet oversized duks u mat crnoj boji. Minimalistički, upečatljiv vertikalni "BORN TO BE Different" print duž leđa. Izrađen od vrhunskog teškog češljanog pamuka sa mekanom brušenom unutrašnjošću, masivnim elastičnim ranflama i prostranim prednjim džepom.',
-    images: [
-      'assets/images/hoodies/hoodie-01-front.jpg',
-      'assets/images/hoodies/hoodie-01-back.jpg'
-    ],
-    hoverImage: 'assets/images/hoodies/hoodie-01-back.jpg',
-    specs: {
-      composition: '100% Češljani Teški Pamuk',
-      weight: 'Visokokvalitetan pamuk',
-      finish: 'Pre-shrunk, Brušeni unutrašnji sloj za maksimalnu udobnost',
-      print: 'Visokodefinisana bela sito-štampa postojana na habanje',
-      origin: 'Beograd, Srbija'
-    },
-    telemetry: {
-      chassis: 'HEAVYWEIGHT BOXY FIT',
-      density: '100% TEŠKI PAMUK',
-      edition: 'RUN 01 / 35'
-    },
-    measurements: {
-      unit: 'cm',
-      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
-      rows: [
-        ['S', '60 cm', '70 cm', '62 cm'],
-        ['M', '63 cm', '72 cm', '64 cm'],
-        ['L', '66 cm', '74 cm', '66 cm'],
-        ['XL', '69 cm', '76 cm', '67 cm'],
-        ['XXL', '72 cm', '78 cm', '68 cm']
-      ]
-    },
-    fitAdvice: 'Oversized boxy kroj koji prirodno i masivno pada.'
-  },
-  {
-    id: 'hoodie-02',
-    sku: 'ZL-HD-02',
-    title: 'ZALET DUKS // 02 — BE REAL CUBE',
-    category: 'hoodies',
-    subcategory: 'streetwear',
-    categoryLabel: 'OVERSIZED DUKS',
-    priceRSD: 4490,
-    priceEUR: 38,
-    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
-    color: 'Pitch Black',
-    colorHex: '#121212',
-    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
-    status: 'IN STOCK',
-    stockCount: 14,
-    leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Geometrijski statement komad. Izometrična 3D kocka sa tipografskim motivom "BE REAL." na grudima. Vrhunski pamuk sa ojačanom kapuljačom i duplim proštepom duž svih šavova.',
-    images: [
-      'assets/images/hoodies/hoodie-02-front.jpg',
-      'assets/images/hoodies/hoodie-02-back.jpg'
-    ],
-    hoverImage: 'assets/images/hoodies/hoodie-02-back.jpg',
-    specs: {
-      composition: '100% Češljani Teški Pamuk',
-      weight: 'Visokokvalitetan pamuk',
-      finish: 'Silikonski finiš i brušena unutrašnjost',
-      print: 'Visokodefinisana 3D bela sito-štampa',
-      origin: 'Beograd, Srbija'
-    },
-    telemetry: {
-      chassis: 'HEAVYWEIGHT BOXY FIT',
-      density: '100% TEŠKI PAMUK',
-      edition: 'RUN 01 / 35'
-    },
-    measurements: {
-      unit: 'cm',
-      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
-      rows: [
-        ['S', '60 cm', '70 cm', '62 cm'],
-        ['M', '63 cm', '72 cm', '64 cm'],
-        ['L', '66 cm', '74 cm', '66 cm'],
-        ['XL', '69 cm', '76 cm', '67 cm'],
-        ['XXL', '72 cm', '78 cm', '68 cm']
-      ]
-    },
-    fitAdvice: 'Oversized boxy kroj koji savršeno zadržava formu.'
-  },
-  {
-    id: 'hoodie-03',
-    sku: 'ZL-HD-03',
-    title: 'ZALET DUKS // 03 — OUTSIDE THE BOX',
-    category: 'hoodies',
-    subcategory: 'streetwear',
+    subcategory: 'motorsport',
     categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
@@ -1025,25 +931,25 @@ const PRODUCTS_DATA = [
     colorHex: '#F5F5F5',
     badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
-    stockCount: 12,
+    stockCount: 15,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Ekskluzivni svetli model sa leđnim motivom "THINK OUTSIDE THE BOX" i prepoznatljivim crvenim akcentom preko iks-oks matrice. Gusto tkanje koje drži formu kapuljače bez padanja.',
+    description: 'Posveta trostrukom F1 svetskom šampionu: Ayrton Senna i pobednički bolid McLaren MP4/4 u legendarnim Marlboro trkačkim bojama. Skaterska i ulična estetika na premijum teškom belom pamuku.',
     images: [
-      'assets/images/hoodies/hoodie-03-front.jpg',
-      'assets/images/hoodies/hoodie-03-back.jpg'
+      'assets/images/hoodies/hoodie-09-front.jpg?v=2',
+      'assets/images/hoodies/hoodie-09-back.jpg?v=2'
     ],
-    hoverImage: 'assets/images/hoodies/hoodie-03-back.jpg',
+    hoverImage: 'assets/images/hoodies/hoodie-09-front.jpg?v=2',
     specs: {
       composition: '100% Češljani Teški Pamuk',
       weight: 'Visokokvalitetan pamuk',
-      finish: 'Pre-shrunk, Anti-pilling obrada',
-      print: 'Dvobojna sito-štampa (crna i crvena)',
+      finish: 'Otporno na habanje i pranje, brušeni unutrašnji sloj',
+      print: 'Visokorezolucijska Senna F1 grafika',
       origin: 'Beograd, Srbija'
     },
     telemetry: {
       chassis: 'HEAVYWEIGHT BOXY FIT',
       density: '100% TEŠKI PAMUK',
-      edition: 'RUN 01 / 30'
+      edition: 'RUN 01 / 45'
     },
     measurements: {
       unit: 'cm',
@@ -1056,41 +962,42 @@ const PRODUCTS_DATA = [
         ['XXL', '72 cm', '78 cm', '68 cm']
       ]
     },
-    fitAdvice: 'Preporučujemo regularnu veličinu za čist boxy pad.'
+    fitAdvice: 'Prostran ulični kroj sa spuštenim ramenima.'
   },
   {
-    id: 'hoodie-04',
-    sku: 'ZL-HD-04',
-    title: 'ZALET DUKS // 04 — POSITIVE WAY UP',
+    id: 'hoodie-02',
+    sku: 'ZL-HD-02',
+    title: 'ZALET DUKS // 02 — MAX VERSTAPPEN #01',
     category: 'hoodies',
-    subcategory: 'streetwear',
+    subcategory: 'motorsport',
     categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
-    color: 'Pitch Black',
-    colorHex: '#121212',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
     badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 16,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Crni duks sa perspektivnim motivom trkačke piste "ALL YOUR WAY UP / POSITIVE" u belo-žutom kontrastu. Masivna silueta, duboka dvoslojna kapuljača i ojačana ranfla oko struka.',
+    description: 'Max Verstappen #01 šampionska edicija. Na prednjoj strani diskretan crveni Formula 1 logo na grudima, dok zadnji panel nosi moćan "VERSTAPPEN #01" motiv sa trkačkim bolidom, kacigom i potpisom šampiona.',
     images: [
-      'assets/images/hoodies/hoodie-04-front.jpg',
-      'assets/images/hoodies/hoodie-04-back.jpg'
+      'assets/images/hoodies/hoodie-10-back.jpg?v=2',
+      'assets/images/hoodies/hoodie-10-front.jpg?v=2',
+      'assets/images/hoodies/hoodie-10-both.jpg?v=2'
     ],
-    hoverImage: 'assets/images/hoodies/hoodie-04-back.jpg',
+    hoverImage: 'assets/images/hoodies/hoodie-10-front.jpg?v=2',
     specs: {
       composition: '100% Češljani Teški Pamuk',
       weight: 'Visokokvalitetan pamuk',
-      finish: 'Topla brušena unutrašnjost',
-      print: 'Višebojna sito-štampa otporna na pranje',
+      finish: 'Dvostruka kapuljača, ojačani šavovi i ranfle',
+      print: 'Prednji crveni F1 logo + leđni Max Verstappen art',
       origin: 'Beograd, Srbija'
     },
     telemetry: {
       chassis: 'HEAVYWEIGHT BOXY FIT',
       density: '100% TEŠKI PAMUK',
-      edition: 'RUN 01 / 35'
+      edition: 'RUN 01 / 50'
     },
     measurements: {
       unit: 'cm',
@@ -1103,7 +1010,101 @@ const PRODUCTS_DATA = [
         ['XXL', '72 cm', '78 cm', '68 cm']
       ]
     },
-    fitAdvice: 'Savršeno pada preko ramena sa spuštenom linijom (drop shoulder).'
+    fitAdvice: 'Boxy silueta, biraj svoju regularnu veličinu.'
+  },
+  {
+    id: 'hoodie-03',
+    sku: 'ZL-HD-03',
+    title: 'ZALET DUKS // 03 — HOT GIRLS WATCH FORMULA 1',
+    category: 'hoodies',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED DUKS',
+    priceRSD: 4490,
+    priceEUR: 38,
+    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 18,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'Najtraženiji leđni statement komad: "hot girls watch FORMULA 1" u upečatljivoj retro trkačkoj crvenoj tipografiji sa stilizovanim F1 bolidom. Teški pamuk sa brušenom postavom.',
+    images: [
+      'assets/images/hoodies/hoodie-12-back.jpg?v=2',
+      'assets/images/hoodies/hoodie-12-front.jpg?v=2'
+    ],
+    hoverImage: 'assets/images/hoodies/hoodie-12-back.jpg?v=2',
+    specs: {
+      composition: '100% Češljani Teški Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Otporno na rastezanje i pranje, dupla kapuljača',
+      print: 'Crvena ekološka sito-štampa visoke postojanosti',
+      origin: 'Beograd, Srbija'
+    },
+    telemetry: {
+      chassis: 'HEAVYWEIGHT BOXY FIT',
+      density: '100% TEŠKI PAMUK',
+      edition: 'RUN 01 / 50'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
+      rows: [
+        ['S', '60 cm', '70 cm', '62 cm'],
+        ['M', '63 cm', '72 cm', '64 cm'],
+        ['L', '66 cm', '74 cm', '66 cm'],
+        ['XL', '69 cm', '76 cm', '67 cm'],
+        ['XXL', '72 cm', '78 cm', '68 cm']
+      ]
+    },
+    fitAdvice: 'Oversized motorsport silueta sa spuštenim ramenima.'
+  },
+  {
+    id: 'hoodie-04',
+    sku: 'ZL-HD-04',
+    title: 'ZALET DUKS // 04 — FORMULA 1 RED BULL RACING CLUB',
+    category: 'hoodies',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED DUKS',
+    priceRSD: 4490,
+    priceEUR: 38,
+    gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
+    badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 16,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'Oracle Red Bull Racing motiv sa šampionskim bolidom Maxa Verstappena. Upečatljiv leđni "FORMULA 1 RACING CLUB" dizajn sa arhivskim podacima, telemetrijom i logotipima. Teški brušeni pamuk sa dubokom kapuljačom.',
+    images: [
+      'assets/images/hoodies/hoodie-13-back.jpg?v=2',
+      'assets/images/hoodies/hoodie-13-front.jpg?v=2'
+    ],
+    hoverImage: 'assets/images/hoodies/hoodie-13-back.jpg?v=2',
+    specs: {
+      composition: '100% Češljani Teški Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Otporno na habanje i pranje, brušena unutrašnjost',
+      print: 'Visokorezolucijska Red Bull F1 grafika',
+      origin: 'Beograd, Srbija'
+    },
+    telemetry: {
+      chassis: 'HEAVYWEIGHT BOXY FIT',
+      density: '100% TEŠKI PAMUK',
+      edition: 'RUN 01 / 50'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Rukav'],
+      rows: [
+        ['S', '60 cm', '70 cm', '62 cm'],
+        ['M', '63 cm', '72 cm', '64 cm'],
+        ['L', '66 cm', '74 cm', '66 cm'],
+        ['XL', '69 cm', '76 cm', '67 cm'],
+        ['XXL', '72 cm', '78 cm', '68 cm']
+      ]
+    },
+    fitAdvice: 'Oversized boxy silueta sa spuštenim ramenima.'
   },
   {
     id: 'hoodie-05',
@@ -1296,36 +1297,36 @@ const PRODUCTS_DATA = [
   {
     id: 'hoodie-09',
     sku: 'ZL-HD-09',
-    title: 'ZALET DUKS // 09 — AYRTON SENNA MP4/4',
+    title: 'ZALET DUKS // 09 — BORN TO BE DIFFERENT',
     category: 'hoodies',
-    subcategory: 'motorsport',
+    subcategory: 'streetwear',
     categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
-    color: 'Crisp Off-White',
-    colorHex: '#F5F5F5',
+    color: 'Pitch Black',
+    colorHex: '#121212',
     badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 15,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Posveta trostrukom F1 svetskom šampionu: Ayrton Senna i pobednički bolid McLaren MP4/4 u legendarnim Marlboro trkačkim bojama. Skaterska i ulična estetika na premijum teškom belom pamuku.',
+    description: 'Autentični Zalet oversized duks u mat crnoj boji. Minimalistički, upečatljiv vertikalni "BORN TO BE Different" print duž leđa. Izrađen od vrhunskog teškog češljanog pamuka sa mekanom brušenom unutrašnjošću, masivnim elastičnim ranflama i prostranim prednjim džepom.',
     images: [
-      'assets/images/hoodies/hoodie-09-front.jpg?v=2',
-      'assets/images/hoodies/hoodie-09-back.jpg?v=2'
+      'assets/images/hoodies/hoodie-01-front.jpg',
+      'assets/images/hoodies/hoodie-01-back.jpg'
     ],
-    hoverImage: 'assets/images/hoodies/hoodie-09-front.jpg?v=2',
+    hoverImage: 'assets/images/hoodies/hoodie-01-back.jpg',
     specs: {
       composition: '100% Češljani Teški Pamuk',
       weight: 'Visokokvalitetan pamuk',
-      finish: 'Otporno na habanje i pranje, brušeni unutrašnji sloj',
-      print: 'Visokorezolucijska Senna F1 grafika',
+      finish: 'Pre-shrunk, Brušeni unutrašnji sloj za maksimalnu udobnost',
+      print: 'Visokodefinisana bela sito-štampa postojana na habanje',
       origin: 'Beograd, Srbija'
     },
     telemetry: {
       chassis: 'HEAVYWEIGHT BOXY FIT',
       density: '100% TEŠKI PAMUK',
-      edition: 'RUN 01 / 45'
+      edition: 'RUN 01 / 35'
     },
     measurements: {
       unit: 'cm',
@@ -1338,42 +1339,41 @@ const PRODUCTS_DATA = [
         ['XXL', '72 cm', '78 cm', '68 cm']
       ]
     },
-    fitAdvice: 'Prostran ulični kroj sa spuštenim ramenima.'
+    fitAdvice: 'Oversized boxy kroj koji prirodno i masivno pada.'
   },
   {
     id: 'hoodie-10',
     sku: 'ZL-HD-10',
-    title: 'ZALET DUKS // 10 — MAX VERSTAPPEN #01',
+    title: 'ZALET DUKS // 10 — BE REAL CUBE',
     category: 'hoodies',
-    subcategory: 'motorsport',
+    subcategory: 'streetwear',
     categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
-    color: 'Crisp Off-White',
-    colorHex: '#F5F5F5',
+    color: 'Pitch Black',
+    colorHex: '#121212',
     badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
-    stockCount: 16,
+    stockCount: 14,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Max Verstappen #01 šampionska edicija. Na prednjoj strani diskretan crveni Formula 1 logo na grudima, dok zadnji panel nosi moćan "VERSTAPPEN #01" motiv sa trkačkim bolidom, kacigom i potpisom šampiona.',
+    description: 'Geometrijski statement komad. Izometrična 3D kocka sa tipografskim motivom "BE REAL." na grudima. Vrhunski pamuk sa ojačanom kapuljačom i duplim proštepom duž svih šavova.',
     images: [
-      'assets/images/hoodies/hoodie-10-back.jpg?v=2',
-      'assets/images/hoodies/hoodie-10-front.jpg?v=2',
-      'assets/images/hoodies/hoodie-10-both.jpg?v=2'
+      'assets/images/hoodies/hoodie-02-front.jpg',
+      'assets/images/hoodies/hoodie-02-back.jpg'
     ],
-    hoverImage: 'assets/images/hoodies/hoodie-10-front.jpg?v=2',
+    hoverImage: 'assets/images/hoodies/hoodie-02-back.jpg',
     specs: {
       composition: '100% Češljani Teški Pamuk',
       weight: 'Visokokvalitetan pamuk',
-      finish: 'Dvostruka kapuljača, ojačani šavovi i ranfle',
-      print: 'Prednji crveni F1 logo + leđni Max Verstappen art',
+      finish: 'Silikonski finiš i brušena unutrašnjost',
+      print: 'Visokodefinisana 3D bela sito-štampa',
       origin: 'Beograd, Srbija'
     },
     telemetry: {
       chassis: 'HEAVYWEIGHT BOXY FIT',
       density: '100% TEŠKI PAMUK',
-      edition: 'RUN 01 / 50'
+      edition: 'RUN 01 / 35'
     },
     measurements: {
       unit: 'cm',
@@ -1386,7 +1386,7 @@ const PRODUCTS_DATA = [
         ['XXL', '72 cm', '78 cm', '68 cm']
       ]
     },
-    fitAdvice: 'Boxy silueta, biraj svoju regularnu veličinu.'
+    fitAdvice: 'Oversized boxy kroj koji savršeno zadržava formu.'
   },
   {
     id: 'hoodie-11',
@@ -1438,9 +1438,9 @@ const PRODUCTS_DATA = [
   {
     id: 'hoodie-12',
     sku: 'ZL-HD-12',
-    title: 'ZALET DUKS // 12 — HOT GIRLS WATCH FORMULA 1',
+    title: 'ZALET DUKS // 12 — OUTSIDE THE BOX',
     category: 'hoodies',
-    subcategory: 'motorsport',
+    subcategory: 'streetwear',
     categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
@@ -1449,25 +1449,25 @@ const PRODUCTS_DATA = [
     colorHex: '#F5F5F5',
     badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
-    stockCount: 18,
+    stockCount: 12,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Najtraženiji leđni statement komad: "hot girls watch FORMULA 1" u upečatljivoj retro trkačkoj crvenoj tipografiji sa stilizovanim F1 bolidom. Teški pamuk sa brušenom postavom.',
+    description: 'Ekskluzivni svetli model sa leđnim motivom "THINK OUTSIDE THE BOX" i prepoznatljivim crvenim akcentom preko iks-oks matrice. Gusto tkanje koje drži formu kapuljače bez padanja.',
     images: [
-      'assets/images/hoodies/hoodie-12-back.jpg?v=2',
-      'assets/images/hoodies/hoodie-12-front.jpg?v=2'
+      'assets/images/hoodies/hoodie-03-front.jpg',
+      'assets/images/hoodies/hoodie-03-back.jpg'
     ],
-    hoverImage: 'assets/images/hoodies/hoodie-12-back.jpg?v=2',
+    hoverImage: 'assets/images/hoodies/hoodie-03-back.jpg',
     specs: {
       composition: '100% Češljani Teški Pamuk',
       weight: 'Visokokvalitetan pamuk',
-      finish: 'Otporno na rastezanje i pranje, dupla kapuljača',
-      print: 'Crvena ekološka sito-štampa visoke postojanosti',
+      finish: 'Pre-shrunk, Anti-pilling obrada',
+      print: 'Dvobojna sito-štampa (crna i crvena)',
       origin: 'Beograd, Srbija'
     },
     telemetry: {
       chassis: 'HEAVYWEIGHT BOXY FIT',
       density: '100% TEŠKI PAMUK',
-      edition: 'RUN 01 / 50'
+      edition: 'RUN 01 / 30'
     },
     measurements: {
       unit: 'cm',
@@ -1480,41 +1480,41 @@ const PRODUCTS_DATA = [
         ['XXL', '72 cm', '78 cm', '68 cm']
       ]
     },
-    fitAdvice: 'Oversized motorsport silueta sa spuštenim ramenima.'
+    fitAdvice: 'Preporučujemo regularnu veličinu za čist boxy pad.'
   },
   {
     id: 'hoodie-13',
     sku: 'ZL-HD-13',
-    title: 'ZALET DUKS // 13 — FORMULA 1 RED BULL RACING CLUB',
+    title: 'ZALET DUKS // 13 — POSITIVE WAY UP',
     category: 'hoodies',
-    subcategory: 'motorsport',
+    subcategory: 'streetwear',
     categoryLabel: 'OVERSIZED DUKS',
     priceRSD: 4490,
     priceEUR: 38,
     gsm: 'VISOKOKVALITETAN TEŠKI PAMUK',
-    color: 'Crisp Off-White',
-    colorHex: '#F5F5F5',
+    color: 'Pitch Black',
+    colorHex: '#121212',
     badges: ['DROP 01 // DUKS', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
     stockCount: 16,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Oracle Red Bull Racing motiv sa šampionskim bolidom Maxa Verstappena. Upečatljiv leđni "FORMULA 1 RACING CLUB" dizajn sa arhivskim podacima, telemetrijom i logotipima. Teški brušeni pamuk sa dubokom kapuljačom.',
+    description: 'Crni duks sa perspektivnim motivom trkačke piste "ALL YOUR WAY UP / POSITIVE" u belo-žutom kontrastu. Masivna silueta, duboka dvoslojna kapuljača i ojačana ranfla oko struka.',
     images: [
-      'assets/images/hoodies/hoodie-13-back.jpg?v=2',
-      'assets/images/hoodies/hoodie-13-front.jpg?v=2'
+      'assets/images/hoodies/hoodie-04-front.jpg',
+      'assets/images/hoodies/hoodie-04-back.jpg'
     ],
-    hoverImage: 'assets/images/hoodies/hoodie-13-back.jpg?v=2',
+    hoverImage: 'assets/images/hoodies/hoodie-04-back.jpg',
     specs: {
       composition: '100% Češljani Teški Pamuk',
       weight: 'Visokokvalitetan pamuk',
-      finish: 'Otporno na habanje i pranje, brušena unutrašnjost',
-      print: 'Visokorezolucijska Red Bull F1 grafika',
+      finish: 'Topla brušena unutrašnjost',
+      print: 'Višebojna sito-štampa otporna na pranje',
       origin: 'Beograd, Srbija'
     },
     telemetry: {
       chassis: 'HEAVYWEIGHT BOXY FIT',
       density: '100% TEŠKI PAMUK',
-      edition: 'RUN 01 / 50'
+      edition: 'RUN 01 / 35'
     },
     measurements: {
       unit: 'cm',
@@ -1527,7 +1527,7 @@ const PRODUCTS_DATA = [
         ['XXL', '72 cm', '78 cm', '68 cm']
       ]
     },
-    fitAdvice: 'Oversized boxy silueta sa spuštenim ramenima.'
+    fitAdvice: 'Savršeno pada preko ramena sa spuštenom linijom (drop shoulder).'
   }
 ];
 
