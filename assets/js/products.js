@@ -4,56 +4,8 @@
 const PRODUCTS_DATA = [
   {
     id: 'tee-01',
-    sku: 'ZL-01-MUG',
-    title: 'ZALET TEE // 01 — MUGELLO \'26 SPECIAL EDITION',
-    category: 'tees',
-    subcategory: 'motorsport',
-    categoryLabel: 'OVERSIZED TEE',
-    priceRSD: 2990,
-    priceEUR: 25,
-    gsm: 'VISOKOKVALITETAN PAMUK',
-    color: 'Crisp Off-White',
-    colorHex: '#F5F5F5',
-    badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
-    status: 'IN STOCK',
-    stockCount: 18,
-    leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Autodromo Internazionale del Mugello special edition. Diskretan Zalet Racing Club Mugello \'26 natpis na grudima, sa živopisnim trkačkim printom crvenih bolida kroz čemprese i zvaničnim koordinatama staze na leđima. Visokokvalitetan pamuk sa dvostrukim štepom i ojačanom kragnom.',
-    images: [
-      'assets/images/tees/tee-01-back.jpg',
-      'assets/images/tees/tee-01-front.jpg'
-    ],
-    hoverImage: 'assets/images/tees/tee-01-front.jpg',
-    specs: {
-      composition: '100% Češljani Compact Pamuk',
-      weight: 'Visokokvalitetan pamuk',
-      finish: 'Pre-shrunk, Anti-torque tretman protiv skupljanja',
-      print: 'Visokodefinisana sito-štampa postojana na pranje',
-      origin: 'Proizvedeno i dorađeno u Beogradu, Srbija'
-    },
-    telemetry: {
-      chassis: 'OVERSIZED BOXY',
-      density: '100% PAMUK',
-      edition: 'RUN 01 / 50'
-    },
-    measurements: {
-      unit: 'cm',
-      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Pad ramena', 'Rukav'],
-      rows: [
-        ['S', '56 cm', '71 cm', '54 cm', '22 cm'],
-        ['M', '59 cm', '74 cm', '56 cm', '23 cm'],
-        ['L', '62 cm', '76 cm', '58 cm', '24 cm'],
-        ['XL', '65 cm', '78 cm', '60 cm', '25 cm'],
-        ['XXL', '68 cm', '80 cm', '62 cm', '26 cm']
-      ]
-    },
-    fitAdvice: 'Autentičan boxy kroj. Uzmi svoju standardnu veličinu za opušteni pad, ili veličinu više za naglašeni oversized kroj.'
-  },
-
-  {
-    id: 'tee-02',
-    sku: 'ZL-02-BLU',
-    title: 'ZALET TEE // 02 — F1 BLUEPRINT TECHNICAL',
+    sku: 'ZL-01-FER',
+    title: 'ZALET TEE // 01 — SCUDERIA FERRARI F1',
     category: 'tees',
     subcategory: 'motorsport',
     categoryLabel: 'OVERSIZED TEE',
@@ -66,21 +18,70 @@ const PRODUCTS_DATA = [
     status: 'IN STOCK',
     stockCount: 14,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'FIA Formula 1 Technical Regulations Blueprint. Minimalistički ZALET wordmark na grudima, dok zadnji panel prikazuje kompletan tehnički šematski nacrt F1 aero-šasije sa telemetrijskim kotama i podacima.',
+    description: 'Scuderia Ferrari Formula 1 Team Fig. 6 tehnički dijagram. Ilustracija F1 bolida u trkačkoj crvenoj boji, okružena aerodinamičkim nacrtima odozgo i sa strane sa arhivskim podacima tima.',
     images: [
-      'assets/images/tees/tee-02-back.jpg',
-      'assets/images/tees/tee-02-front.jpg'
+      'assets/images/tees/tee-08-front.jpg',
+      'assets/images/tees/tee-08-both.jpg',
+      'assets/images/tees/tee-08-back.jpg'
     ],
-    hoverImage: 'assets/images/tees/tee-02-front.jpg',
+    hoverImage: 'assets/images/tees/tee-08-back.jpg',
     specs: {
-      composition: '100% Češljani Compact Pamuk',
-      weight: 'Visokokvalitetan pamuk',
-      finish: 'Silikonski finiš za mekoću i postojanost forme',
-      print: 'Arhivski tehnički šematski print',
-      origin: 'Proizvedeno u Beogradu'
+      composition: '100% Češljani Pamuk',
+      weight: 'PREMIUM PAMUK',
+      finish: 'Meki dodir pamučnog vlakna',
+      print: 'Detaljna višebojna sito štampa',
+      origin: 'Beograd'
     },
     telemetry: {
-      chassis: 'AERO SCHEMATIC',
+      chassis: 'MARANELLO SF',
+      density: '100% PAMUK',
+      edition: 'RUN 01 / 45'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Pad ramena', 'Rukav'],
+      rows: [
+        ['S', '56 cm', '71 cm', '54 cm', '22 cm'],
+        ['M', '59 cm', '74 cm', '56 cm', '23 cm'],
+        ['L', '62 cm', '76 cm', '58 cm', '24 cm'],
+        ['XL', '65 cm', '78 cm', '60 cm', '25 cm'],
+        ['XXL', '68 cm', '80 cm', '62 cm', '26 cm']
+      ]
+    },
+    fitAdvice: 'Boxy silueta.'
+  },
+
+  {
+    id: 'tee-02',
+    sku: 'ZL-02-SEN',
+    title: 'ZALET TEE // 02 — AYRTON SENNA MP4/4 1988',
+    category: 'tees',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED TEE',
+    priceRSD: 2990,
+    priceEUR: 25,
+    gsm: 'VISOKOKVALITETAN PAMUK',
+    color: 'Deep Racing Black',
+    colorHex: '#0A0A0A',
+    badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 13,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'Posveta najvećem trkaču svih vremena: Ayrton Senna, njegova prepoznatljiva žuta kaciga i šampionski bolid McLaren MP4/4 iz sezone 1988 sa Senna citatom: "Winning a race is a much bigger challenge than winning a million dollars."',
+    images: [
+      'assets/images/tees/tee-09-front.jpg',
+      'assets/images/tees/tee-09-back.jpg'
+    ],
+    hoverImage: 'assets/images/tees/tee-09-back.jpg',
+    specs: {
+      composition: '100% Češljani Pamuk',
+      weight: 'PREMIUM PAMUK',
+      finish: 'Otporno na skupljanje',
+      print: 'Visokodefinisana foto-štampa',
+      origin: 'Beograd, Srbija'
+    },
+    telemetry: {
+      chassis: 'SENNA 1988 MP4/4',
       density: '100% PAMUK',
       edition: 'RUN 01 / 50'
     },
@@ -95,7 +96,7 @@ const PRODUCTS_DATA = [
         ['XXL', '68 cm', '80 cm', '62 cm', '26 cm']
       ]
     },
-    fitAdvice: 'Boxy streetwear kroj sa spuštenim ramenima.'
+    fitAdvice: 'Opušten ulični pad na crnom teškom pamuku.'
   },
 
   {
@@ -148,35 +149,35 @@ const PRODUCTS_DATA = [
 
   {
     id: 'carrera-r02-tee',
-    sku: 'ZL-04-SLY',
-    title: 'ZALET TEE // 04 — SALLY CARRERA "HEART RACING"',
+    sku: 'ZL-04-MNY',
+    title: 'ZALET TEE // 04 — NEED MONEY FOR PORSCHE',
     category: 'tees',
-    subcategory: 'motorsport',
+    subcategory: 'streetwear',
     categoryLabel: 'OVERSIZED TEE',
     priceRSD: 2990,
     priceEUR: 25,
     gsm: 'VISOKOKVALITETAN PAMUK',
-    color: 'Crisp Off-White',
-    colorHex: '#F5F5F5',
+    color: 'Crisp White',
+    colorHex: '#FFFFFF',
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
-    stockCount: 16,
+    stockCount: 20,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Najtraženiji model kolekcije! Plavi ZALET CARRERA R02 logo na prednjem delu, dok leđa krasi Sally Carrera i upečatljiv slogan "YOU HAVE MY HEART RACING!" sa fabričkim specifikacijama i podacima o motoru.',
+    description: 'Jedan od najviralnijih komada sa Zalet Instagrama! Ulični grafit ispis u drip stilu: "NEED Money for Porsche". Jednostavno, direktno i sa jasnim ciljem.',
     images: [
-      'assets/images/tees/tee-04-back.jpg',
-      'assets/images/tees/tee-04-front.jpg'
+      'assets/images/tees/tee-13-front.jpg',
+      'assets/images/tees/tee-13-back.jpg'
     ],
-    hoverImage: 'assets/images/tees/tee-04-front.jpg',
+    hoverImage: 'assets/images/tees/tee-13-back.jpg',
     specs: {
       composition: '100% Češljani Pamuk',
-      weight: 'Visokokvalitetan pamuk',
-      finish: 'Meki karbonski dodir',
-      print: 'Specijalna Carrera plava sito-štampa',
-      origin: 'Ručno dorađeno u Beogradu'
+      weight: 'PREMIUM PAMUK',
+      finish: 'Otporno na uvijanje i habanje',
+      print: 'Drip grafit sito štampa',
+      origin: 'Beograd, Srbija'
     },
     telemetry: {
-      chassis: '996-GEN RACING',
+      chassis: 'DRIP GRAFFITI',
       density: '100% PAMUK',
       edition: 'RUN 01 / 60'
     },
@@ -191,7 +192,7 @@ const PRODUCTS_DATA = [
         ['XXL', '68 cm', '80 cm', '62 cm', '26 cm']
       ]
     },
-    fitAdvice: 'Boxy streetwear kroj, preporučujemo tvoju standardnu veličinu.'
+    fitAdvice: 'Boxy ulični kroj.'
   },
 
   {
@@ -292,84 +293,35 @@ const PRODUCTS_DATA = [
 
   {
     id: 'tee-08',
-    sku: 'ZL-07-FER',
-    title: 'ZALET TEE // 07 — SCUDERIA FERRARI F1',
+    sku: 'ZL-07-MUG',
+    title: 'ZALET TEE // 07 — MUGELLO \'26 SPECIAL EDITION',
     category: 'tees',
     subcategory: 'motorsport',
     categoryLabel: 'OVERSIZED TEE',
     priceRSD: 2990,
     priceEUR: 25,
     gsm: 'VISOKOKVALITETAN PAMUK',
-    color: 'Crisp White',
-    colorHex: '#FFFFFF',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
-    stockCount: 14,
+    stockCount: 18,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Scuderia Ferrari Formula 1 Team Fig. 6 tehnički dijagram. Ilustracija F1 bolida u trkačkoj crvenoj boji, okružena aerodinamičkim nacrtima odozgo i sa strane sa arhivskim podacima tima.',
+    description: 'Autodromo Internazionale del Mugello special edition. Diskretan Zalet Racing Club Mugello \'26 natpis na grudima, sa živopisnim trkačkim printom crvenih bolida kroz čemprese i zvaničnim koordinatama staze na leđima. Visokokvalitetan pamuk sa dvostrukim štepom i ojačanom kragnom.',
     images: [
-      'assets/images/tees/tee-08-front.jpg',
-      'assets/images/tees/tee-08-both.jpg',
-      'assets/images/tees/tee-08-back.jpg'
+      'assets/images/tees/tee-01-back.jpg',
+      'assets/images/tees/tee-01-front.jpg'
     ],
-    hoverImage: 'assets/images/tees/tee-08-back.jpg',
+    hoverImage: 'assets/images/tees/tee-01-front.jpg',
     specs: {
-      composition: '100% Češljani Pamuk',
-      weight: 'PREMIUM PAMUK',
-      finish: 'Meki dodir pamučnog vlakna',
-      print: 'Detaljna višebojna sito štampa',
-      origin: 'Beograd'
+      composition: '100% Češljani Compact Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Pre-shrunk, Anti-torque tretman protiv skupljanja',
+      print: 'Visokodefinisana sito-štampa postojana na pranje',
+      origin: 'Proizvedeno i dorađeno u Beogradu, Srbija'
     },
     telemetry: {
-      chassis: 'MARANELLO SF',
-      density: '100% PAMUK',
-      edition: 'RUN 01 / 45'
-    },
-    measurements: {
-      unit: 'cm',
-      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Pad ramena', 'Rukav'],
-      rows: [
-        ['S', '56 cm', '71 cm', '54 cm', '22 cm'],
-        ['M', '59 cm', '74 cm', '56 cm', '23 cm'],
-        ['L', '62 cm', '76 cm', '58 cm', '24 cm'],
-        ['XL', '65 cm', '78 cm', '60 cm', '25 cm'],
-        ['XXL', '68 cm', '80 cm', '62 cm', '26 cm']
-      ]
-    },
-    fitAdvice: 'Boxy silueta.'
-  },
-
-  {
-    id: 'tee-09',
-    sku: 'ZL-08-SEN',
-    title: 'ZALET TEE // 08 — AYRTON SENNA MP4/4 1988',
-    category: 'tees',
-    subcategory: 'motorsport',
-    categoryLabel: 'OVERSIZED TEE',
-    priceRSD: 2990,
-    priceEUR: 25,
-    gsm: 'VISOKOKVALITETAN PAMUK',
-    color: 'Deep Racing Black',
-    colorHex: '#0A0A0A',
-    badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
-    status: 'IN STOCK',
-    stockCount: 13,
-    leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Posveta najvećem trkaču svih vremena: Ayrton Senna, njegova prepoznatljiva žuta kaciga i šampionski bolid McLaren MP4/4 iz sezone 1988 sa Senna citatom: "Winning a race is a much bigger challenge than winning a million dollars."',
-    images: [
-      'assets/images/tees/tee-09-front.jpg',
-      'assets/images/tees/tee-09-back.jpg'
-    ],
-    hoverImage: 'assets/images/tees/tee-09-back.jpg',
-    specs: {
-      composition: '100% Češljani Pamuk',
-      weight: 'PREMIUM PAMUK',
-      finish: 'Otporno na skupljanje',
-      print: 'Visokodefinisana foto-štampa',
-      origin: 'Beograd, Srbija'
-    },
-    telemetry: {
-      chassis: 'SENNA 1988 MP4/4',
+      chassis: 'OVERSIZED BOXY',
       density: '100% PAMUK',
       edition: 'RUN 01 / 50'
     },
@@ -384,7 +336,55 @@ const PRODUCTS_DATA = [
         ['XXL', '68 cm', '80 cm', '62 cm', '26 cm']
       ]
     },
-    fitAdvice: 'Opušten ulični pad na crnom teškom pamuku.'
+    fitAdvice: 'Autentičan boxy kroj. Uzmi svoju standardnu veličinu za opušteni pad, ili veličinu više za naglašeni oversized kroj.'
+  },
+
+  {
+    id: 'tee-09',
+    sku: 'ZL-08-BLU',
+    title: 'ZALET TEE // 08 — F1 BLUEPRINT TECHNICAL',
+    category: 'tees',
+    subcategory: 'motorsport',
+    categoryLabel: 'OVERSIZED TEE',
+    priceRSD: 2990,
+    priceEUR: 25,
+    gsm: 'VISOKOKVALITETAN PAMUK',
+    color: 'Crisp White',
+    colorHex: '#FFFFFF',
+    badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
+    status: 'IN STOCK',
+    stockCount: 14,
+    leadTime: '24-48h Dostava na kućnu adresu',
+    description: 'FIA Formula 1 Technical Regulations Blueprint. Minimalistički ZALET wordmark na grudima, dok zadnji panel prikazuje kompletan tehnički šematski nacrt F1 aero-šasije sa telemetrijskim kotama i podacima.',
+    images: [
+      'assets/images/tees/tee-02-back.jpg',
+      'assets/images/tees/tee-02-front.jpg'
+    ],
+    hoverImage: 'assets/images/tees/tee-02-front.jpg',
+    specs: {
+      composition: '100% Češljani Compact Pamuk',
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Silikonski finiš za mekoću i postojanost forme',
+      print: 'Arhivski tehnički šematski print',
+      origin: 'Proizvedeno u Beogradu'
+    },
+    telemetry: {
+      chassis: 'AERO SCHEMATIC',
+      density: '100% PAMUK',
+      edition: 'RUN 01 / 50'
+    },
+    measurements: {
+      unit: 'cm',
+      columns: ['Veličina', 'Širina grudi', 'Ukupna dužina', 'Pad ramena', 'Rukav'],
+      rows: [
+        ['S', '56 cm', '71 cm', '54 cm', '22 cm'],
+        ['M', '59 cm', '74 cm', '56 cm', '23 cm'],
+        ['L', '62 cm', '76 cm', '58 cm', '24 cm'],
+        ['XL', '65 cm', '78 cm', '60 cm', '25 cm'],
+        ['XXL', '68 cm', '80 cm', '62 cm', '26 cm']
+      ]
+    },
+    fitAdvice: 'Boxy streetwear kroj sa spuštenim ramenima.'
   },
 
   {
@@ -534,35 +534,35 @@ const PRODUCTS_DATA = [
 
   {
     id: 'tee-13',
-    sku: 'ZL-12-MNY',
-    title: 'ZALET TEE // 12 — NEED MONEY FOR PORSCHE',
+    sku: 'ZL-12-SLY',
+    title: 'ZALET TEE // 12 — SALLY CARRERA "HEART RACING"',
     category: 'tees',
-    subcategory: 'streetwear',
+    subcategory: 'motorsport',
     categoryLabel: 'OVERSIZED TEE',
     priceRSD: 2990,
     priceEUR: 25,
     gsm: 'VISOKOKVALITETAN PAMUK',
-    color: 'Crisp White',
-    colorHex: '#FFFFFF',
+    color: 'Crisp Off-White',
+    colorHex: '#F5F5F5',
     badges: ['DROP 01', 'LIMITIRANO', 'PREMIUM PAMUK'],
     status: 'IN STOCK',
-    stockCount: 20,
+    stockCount: 16,
     leadTime: '24-48h Dostava na kućnu adresu',
-    description: 'Jedan od najviralnijih komada sa Zalet Instagrama! Ulični grafit ispis u drip stilu: "NEED Money for Porsche". Jednostavno, direktno i sa jasnim ciljem.',
+    description: 'Najtraženiji model kolekcije! Plavi ZALET CARRERA R02 logo na prednjem delu, dok leđa krasi Sally Carrera i upečatljiv slogan "YOU HAVE MY HEART RACING!" sa fabričkim specifikacijama i podacima o motoru.',
     images: [
-      'assets/images/tees/tee-13-front.jpg',
-      'assets/images/tees/tee-13-back.jpg'
+      'assets/images/tees/tee-04-back.jpg',
+      'assets/images/tees/tee-04-front.jpg'
     ],
-    hoverImage: 'assets/images/tees/tee-13-back.jpg',
+    hoverImage: 'assets/images/tees/tee-04-front.jpg',
     specs: {
       composition: '100% Češljani Pamuk',
-      weight: 'PREMIUM PAMUK',
-      finish: 'Otporno na uvijanje i habanje',
-      print: 'Drip grafit sito štampa',
-      origin: 'Beograd, Srbija'
+      weight: 'Visokokvalitetan pamuk',
+      finish: 'Meki karbonski dodir',
+      print: 'Specijalna Carrera plava sito-štampa',
+      origin: 'Ručno dorađeno u Beogradu'
     },
     telemetry: {
-      chassis: 'DRIP GRAFFITI',
+      chassis: '996-GEN RACING',
       density: '100% PAMUK',
       edition: 'RUN 01 / 60'
     },
@@ -577,7 +577,7 @@ const PRODUCTS_DATA = [
         ['XXL', '68 cm', '80 cm', '62 cm', '26 cm']
       ]
     },
-    fitAdvice: 'Boxy ulični kroj.'
+    fitAdvice: 'Boxy streetwear kroj, preporučujemo tvoju standardnu veličinu.'
   },
 
   {
