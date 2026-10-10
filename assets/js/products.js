@@ -1,4 +1,4 @@
-﻿// ZALET MOTORSPORT STREETWEAR // DROP 01 CATALOG DATA
+// ZALET MOTORSPORT STREETWEAR // DROP 01 CATALOG DATA
 // 20 Authentic Limited Edition Streetwear & Motorsport T-Shirts
 
 const PRODUCTS_DATA = [
@@ -70,6 +70,7 @@ const PRODUCTS_DATA = [
     description: 'Posveta najvećem trkaču svih vremena: Ayrton Senna, njegova prepoznatljiva žuta kaciga i šampionski bolid McLaren MP4/4 iz sezone 1988 sa Senna citatom: "Winning a race is a much bigger challenge than winning a million dollars."',
     images: [
       'assets/images/tees/tee-09-front.jpg',
+      'assets/images/tees/tee-09-both.jpg?v=1',
       'assets/images/tees/tee-09-back.jpg'
     ],
     hoverImage: 'assets/images/tees/tee-09-back.jpg',
