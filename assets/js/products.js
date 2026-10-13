@@ -455,9 +455,10 @@ const PRODUCTS_DATA = [
     description: 'Najpoznatija zadnjica u istoriji JDM kulture: Toyota Supra MK4 presečena vertikalnim SUPRA ispisom i japanskim crvenim suncem. Brutalan kontrast i čist ulični stav.',
     images: [
       'assets/images/tees/tee-11-front.jpg',
-      'assets/images/tees/tee-11-back.jpg'
+      'assets/images/tees/tee-11-hanger-front.jpg?v=1',
+      'assets/images/tees/tee-11-hanger-back.jpg?v=1'
     ],
-    hoverImage: 'assets/images/tees/tee-11-back.jpg',
+    hoverImage: 'assets/images/tees/tee-11-hanger-front.jpg?v=1',
     specs: {
       composition: '100% Heavyweight Češljani Pamuk',
       weight: 'PREMIUM PAMUK',
