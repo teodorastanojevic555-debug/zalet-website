@@ -1548,9 +1548,9 @@ Plaćanje: Pouzećem`;
         }
 
         try {
-          // Timeout after 15 seconds to prevent hanging button state if network stalls
+          // Timeout after 50 seconds to accommodate slow SMTP dispatch on FormSubmit
           const abortController = new AbortController();
-          const timeoutId = setTimeout(() => abortController.abort(), 15000);
+          const timeoutId = setTimeout(() => abortController.abort(), 50000);
 
           const response = await fetch('https://formsubmit.co/ajax/teodorastanojevic555@gmail.com', {
             method: 'POST',
@@ -1568,15 +1568,21 @@ Plaćanje: Pouzećem`;
             throw new Error(`HTTP ${response.status}`);
           }
 
-          const responseData = await response.json();
+          let responseData = null;
+          try {
+            responseData = await response.json();
+          } catch (jsonErr) {
+            console.warn('FormSubmit nije vratio JSON, ali je status 200 OK:', jsonErr);
+          }
 
           // FormSubmit responds with success: "true"/true on active forms,
           // or a message stating "This form needs Activation..." on the first unverified submission.
-          // In both cases the submission has been accepted into FormSubmit's system.
-          const isSuccessfulDispatch = responseData && (
+          // In both cases (or on clean 200 OK), the submission has been accepted into FormSubmit's system.
+          const isSuccessfulDispatch = response.ok && (
+            !responseData ||
             responseData.success === true ||
             responseData.success === 'true' ||
-            (typeof responseData.message === 'string' && /activat/i.test(responseData.message))
+            (typeof responseData.message === 'string' && /activat|success|submitted|ok/i.test(responseData.message))
           );
 
           if (!isSuccessfulDispatch) {
